@@ -1,0 +1,20 @@
+{
+  "name": "vks-portfolio",
+  "version": "1.0.0",
+  "description": "Vijay Karan Sharma - Shopify Developer Portfolio",
+  "main": "index.html",
+  "scripts": {
+    "dev": "live-server",
+    "start": "live-server"
+  },
+  "keywords": [
+    "shopify",
+    "developer",
+    "portfolio"
+  ],
+  "author": "Vijay Karan Sharma",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
