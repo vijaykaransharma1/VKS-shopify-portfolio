@@ -133,69 +133,402 @@ section {
 }
 
 /* ==========================================
-   SCROLL REVEAL ANIMATIONS
+   APPLE / AIRDROP STYLE SCROLL REVEAL ANIMATIONS
    ========================================== */
+
+/* ── Main reveal: AirDrop-style — opens from center like a portal expanding ── */
 .reveal {
   opacity: 0;
-  transform: translateY(32px);
-  filter: blur(6px);
-  transition: opacity 0.7s cubic-bezier(0.22,1,0.36,1), transform 0.7s cubic-bezier(0.22,1,0.36,1), filter 0.7s ease;
+  transform: translateY(40px) scale(0.92);
+  filter: blur(12px);
+  clip-path: inset(12% 8% 12% 8% round 24px);
+  transition:
+    opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    clip-path 0.85s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .reveal.visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
   filter: blur(0);
+  clip-path: inset(0% 0% 0% 0% round 0px);
 }
 
+/* ── Reveal from left — slides in like an AirDrop device card ── */
 .reveal-left {
   opacity: 0;
-  transform: translateX(-36px);
-  filter: blur(6px);
-  transition: opacity 0.7s cubic-bezier(0.22,1,0.36,1), transform 0.7s cubic-bezier(0.22,1,0.36,1), filter 0.7s ease;
+  transform: translateX(-50px) scale(0.93);
+  filter: blur(10px);
+  clip-path: inset(6% 15% 6% 0% round 18px);
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.7s ease,
+    clip-path 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .reveal-left.visible {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateX(0) scale(1);
   filter: blur(0);
+  clip-path: inset(0% 0% 0% 0% round 0px);
 }
 
+/* ── Reveal from right ── */
 .reveal-right {
   opacity: 0;
-  transform: translateX(36px);
-  filter: blur(6px);
-  transition: opacity 0.7s cubic-bezier(0.22,1,0.36,1), transform 0.7s cubic-bezier(0.22,1,0.36,1), filter 0.7s ease;
+  transform: translateX(50px) scale(0.93);
+  filter: blur(10px);
+  clip-path: inset(6% 0% 6% 15% round 18px);
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.7s ease,
+    clip-path 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .reveal-right.visible {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateX(0) scale(1);
   filter: blur(0);
+  clip-path: inset(0% 0% 0% 0% round 0px);
 }
 
+/* ── Scale reveal — pops from center like Apple widget ── */
 .reveal-scale {
   opacity: 0;
-  transform: scale(0.94);
-  filter: blur(4px);
-  transition: opacity 0.6s ease, transform 0.6s ease, filter 0.6s ease;
+  transform: scale(0.82) translateY(20px);
+  filter: blur(8px);
+  clip-path: inset(10% 10% 10% 10% round 30px);
+  transition:
+    opacity 0.75s cubic-bezier(0.34, 1.56, 0.64, 1),
+    transform 0.75s cubic-bezier(0.34, 1.56, 0.64, 1),
+    filter 0.6s ease,
+    clip-path 0.75s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .reveal-scale.visible {
   opacity: 1;
-  transform: scale(1);
+  transform: scale(1) translateY(0);
   filter: blur(0);
+  clip-path: inset(0% 0% 0% 0% round 0px);
 }
 
-/* Staggered child delays */
-.stagger-children > *:nth-child(1) { transition-delay: 0.04s; }
-.stagger-children > *:nth-child(2) { transition-delay: 0.10s; }
-.stagger-children > *:nth-child(3) { transition-delay: 0.16s; }
-.stagger-children > *:nth-child(4) { transition-delay: 0.22s; }
-.stagger-children > *:nth-child(5) { transition-delay: 0.28s; }
-.stagger-children > *:nth-child(6) { transition-delay: 0.34s; }
-.stagger-children > *:nth-child(7) { transition-delay: 0.40s; }
-.stagger-children > *:nth-child(8) { transition-delay: 0.46s; }
+/* ── Staggered child delays — Apple-style cascade ── */
+.stagger-children > *:nth-child(1)  { transition-delay: 0.05s; }
+.stagger-children > *:nth-child(2)  { transition-delay: 0.13s; }
+.stagger-children > *:nth-child(3)  { transition-delay: 0.21s; }
+.stagger-children > *:nth-child(4)  { transition-delay: 0.29s; }
+.stagger-children > *:nth-child(5)  { transition-delay: 0.37s; }
+.stagger-children > *:nth-child(6)  { transition-delay: 0.45s; }
+.stagger-children > *:nth-child(7)  { transition-delay: 0.53s; }
+.stagger-children > *:nth-child(8)  { transition-delay: 0.61s; }
+.stagger-children > *:nth-child(9)  { transition-delay: 0.69s; }
+.stagger-children > *:nth-child(10) { transition-delay: 0.77s; }
+
+/* ==========================================
+   APPLE PREMIUM MICRO-ANIMATIONS & EFFECTS
+   ========================================== */
+
+/* ── Cursor Spotlight (injected via JS) ── */
+.cursor-spotlight {
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  background: radial-gradient(circle, rgba(91, 33, 182, 0.06) 0%, rgba(0, 128, 96, 0.03) 40%, transparent 70%);
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease;
+  mix-blend-mode: multiply;
+}
+
+/* ── Shimmer Sweep on hover ── */
+.shimmer-card {
+  position: relative;
+  overflow: hidden;
+}
+.shimmer-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    105deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.45) 50%,
+    transparent 70%
+  );
+  transform: translateX(-150%) skewX(-15deg);
+  pointer-events: none;
+}
+.shimmer-card:hover::after {
+  animation: shimmer-sweep 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* ── Apple Tilt Card (3D perspective on hover) ── */
+.tilt-card {
+  transform-style: preserve-3d;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+  will-change: transform;
+}
+.tilt-card:hover {
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.15), 0 8px 24px rgba(91, 33, 182, 0.12);
+}
+
+/* ── Ambient Floating Particles (section backgrounds) ── */
+.particles-container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  animation: particleRise linear infinite;
+  opacity: 0;
+}
+.particle:nth-child(1)  { width: 4px; height: 4px; left: 10%; bottom: -10px; background: rgba(91,33,182,0.25); animation-duration: 8s; animation-delay: 0s; }
+.particle:nth-child(2)  { width: 6px; height: 6px; left: 25%; bottom: -10px; background: rgba(0,128,96,0.2); animation-duration: 11s; animation-delay: 2s; }
+.particle:nth-child(3)  { width: 3px; height: 3px; left: 40%; bottom: -10px; background: rgba(91,33,182,0.3); animation-duration: 9s; animation-delay: 4s; }
+.particle:nth-child(4)  { width: 5px; height: 5px; left: 55%; bottom: -10px; background: rgba(0,128,96,0.25); animation-duration: 13s; animation-delay: 1s; }
+.particle:nth-child(5)  { width: 4px; height: 4px; left: 70%; bottom: -10px; background: rgba(124,58,237,0.2); animation-duration: 10s; animation-delay: 3s; }
+.particle:nth-child(6)  { width: 7px; height: 7px; left: 85%; bottom: -10px; background: rgba(0,128,96,0.15); animation-duration: 12s; animation-delay: 5s; }
+.particle:nth-child(7)  { width: 3px; height: 3px; left: 18%; bottom: -10px; background: rgba(91,33,182,0.2); animation-duration: 14s; animation-delay: 6s; }
+.particle:nth-child(8)  { width: 5px; height: 5px; left: 62%; bottom: -10px; background: rgba(0,128,96,0.3); animation-duration: 7s; animation-delay: 1.5s; }
+
+/* ── Ripple on button click ── */
+.btn-ripple {
+  position: relative;
+  overflow: hidden;
+}
+.btn-ripple .ripple-effect {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.35);
+  pointer-events: none;
+  animation: ripple 0.6s ease-out forwards;
+  transform-origin: center;
+}
+
+/* ── Section entrance glow flash ── */
+.section-glow-enter {
+  animation: glowPulse 1.2s ease-out forwards;
+}
+
+/* ── Magnetic button spring scale ── */
+.btn-primary, .btn-secondary, .btn-hire {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.3s ease,
+              background 0.3s ease !important;
+}
+.btn-primary::before, .btn-secondary::before, .btn-hire::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: inherit;
+  pointer-events: none;
+}
+.btn-primary:hover::before, .btn-secondary:hover::before, .btn-hire:hover::before {
+  opacity: 1;
+}
+.btn-primary:active, .btn-secondary:active, .btn-hire:active {
+  transform: scale(0.96) !important;
+}
+
+/* ── Apple Floating Badge enhanced ── */
+.floating-badge {
+  animation: float 5s ease-in-out infinite;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+}
+.floating-badge:hover {
+  transform: translateY(-8px) scale(1.06);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.18), 0 2px 0 rgba(255,255,255,0.9) inset;
+}
+
+/* ── Skill card — shimmer on hover + spring lift ── */
+.skill-card {
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.4s ease,
+              border-color 0.3s ease,
+              background 0.3s ease !important;
+}
+.skill-card:hover {
+  transform: translateY(-10px) scale(1.02) !important;
+  box-shadow: 0 24px 60px rgba(91, 33, 182, 0.14),
+              0 8px 24px rgba(0, 128, 96, 0.08),
+              0 1px 0 rgba(255,255,255,0.9) inset !important;
+}
+
+/* ── Project card — Apple perspective tilt + shimmer ── */
+.project-card {
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.4s ease,
+              border-color 0.3s ease !important;
+}
+.project-card:hover {
+  transform: translateY(-12px) scale(1.02) !important;
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.12),
+              0 12px 32px rgba(91, 33, 182, 0.1),
+              0 1px 0 rgba(255,255,255,0.9) inset !important;
+}
+
+/* ── Timeline card — slide from left + spring ── */
+.timeline-card {
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.4s ease,
+              border-color 0.3s ease !important;
+}
+.timeline-item:hover .timeline-card {
+  transform: translateX(10px) !important;
+  box-shadow: 0 16px 50px rgba(0, 128, 96, 0.12),
+              0 4px 16px rgba(0, 0, 0, 0.06) !important;
+}
+
+/* ── Nav link — Apple pill indicator ── */
+.nav-link {
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+.nav-link:hover {
+  transform: translateY(-1px);
+}
+.nav-link.active {
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+/* ── Stat card — spring bounce on reveal ── */
+.stat-card.visible .stat-number {
+  animation: statBounce 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* ── Workflow step card ── */
+.workflow-card {
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.4s ease,
+              border-color 0.3s ease !important;
+}
+.workflow-card:hover {
+  transform: translateY(-10px) scale(1.03) !important;
+  box-shadow: 0 28px 70px rgba(91, 33, 182, 0.12),
+              0 8px 24px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* ── Section tag — shimmer text ── */
+.section-tag {
+  background-size: 200% auto;
+  transition: all 0.3s ease;
+}
+.section-tag:hover {
+  background-position: right center;
+  transform: scale(1.03);
+}
+
+/* ── Hero title — gradient slide on load ── */
+.hero-title {
+  animation: slideUpFade 1s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+}
+
+/* ── Logo — shimmer on hover ── */
+.logo:hover {
+  background: linear-gradient(90deg,
+    var(--text-primary) 0%,
+    var(--shopify-green) 25%,
+    var(--accent-color) 50%,
+    var(--shopify-green) 75%,
+    var(--text-primary) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: logoShimmer 1.5s linear infinite;
+}
+
+/* ── Social circle — spring bounce ── */
+.social-circle {
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.3s ease,
+              color 0.25s ease,
+              border-color 0.25s ease !important;
+}
+.social-circle:hover {
+  transform: translateY(-6px) scale(1.15) !important;
+}
+
+/* ── Avatar — parallax glow ring ── */
+.avatar-container::before {
+  content: '';
+  position: absolute;
+  inset: -40px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(91, 33, 182, 0.07) 0%, transparent 65%);
+  animation: orbDrift 12s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* ── Tab button spring ── */
+.tab-btn {
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+.tab-btn:hover:not(.active) {
+  transform: translateY(-2px) scale(1.03);
+}
+.tab-btn.active {
+  transform: scale(1.05);
+}
+
+/* ── Contact input focus — Apple-style glow ── */
+.form-control:focus {
+  box-shadow: 0 0 0 4px rgba(91, 33, 182, 0.12),
+              0 8px 24px rgba(91, 33, 182, 0.08) !important;
+  transform: scale(1.01);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* ── Section divider — animate width on reveal ── */
+.section-divider {
+  transform-origin: left;
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.section-header.visible .section-divider {
+  animation: barFill 1s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+}
+
+/* ── Background orb — slow ambient drift ── */
+.orb-ambient {
+  animation: orbDrift 18s ease-in-out infinite;
+}
+
+/* ── Scroll progress indicator (Apple Dynamic Island style) ── */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--shopify-green), var(--accent-color), #06b6d4);
+  background-size: 200% 100%;
+  animation: gradient-shift 3s ease infinite;
+  z-index: 9999;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.1s linear;
+}
+
+/* ── Hero floating badges extra spring ── */
+.badge-shopify { animation: float 5s ease-in-out infinite !important; }
+.badge-code { animation: float-reverse 6s ease-in-out infinite 1.5s !important; }
 
 /* ==========================================
    IPHONE-STYLE GLASS / BLUR UTILITIES
@@ -1979,9 +2312,18 @@ textarea.form-control {
 /* ==========================================
    KEYFRAME ANIMATIONS
    ========================================== */
+
+/* Classic float */
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-12px); }
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-10px) rotate(-1deg); }
+  66% { transform: translateY(-6px) rotate(1deg); }
+}
+
+@keyframes float-reverse {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(8px) rotate(1deg); }
+  66% { transform: translateY(4px) rotate(-1deg); }
 }
 
 @keyframes spin-slow {
@@ -2011,7 +2353,7 @@ textarea.form-control {
 
 @keyframes pulse-green {
   0%, 100% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.4); }
-  50% { box-shadow: 0 0 0 6px rgba(74, 222, 128, 0); }
+  50% { box-shadow: 0 0 0 8px rgba(74, 222, 128, 0); }
 }
 
 @keyframes border-rotate {
@@ -2027,8 +2369,13 @@ textarea.form-control {
 }
 
 @keyframes shimmer {
-  from { left: -100%; }
-  to { left: 100%; }
+  from { left: -150%; }
+  to { left: 150%; }
+}
+
+@keyframes shimmer-sweep {
+  0% { transform: translateX(-100%) skewX(-15deg); }
+  100% { transform: translateX(300%) skewX(-15deg); }
 }
 
 @keyframes count-up {
@@ -2036,18 +2383,128 @@ textarea.form-control {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Card appear animation — fires on every render (dynamically filtered items) */
+/* AirDrop-style card appear — portal opening from center */
 @keyframes cardAppear {
+  0% {
+    opacity: 0;
+    transform: scale(0.85) translateY(28px);
+    filter: blur(14px);
+    clip-path: inset(16% 12% 16% 12% round 28px);
+  }
+  60% {
+    clip-path: inset(0% 0% 0% 0% round 18px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    filter: blur(0);
+    clip-path: inset(0% 0% 0% 0% round 0px);
+  }
+}
+
+/* Apple Hero text reveal — characters slide up */
+@keyframes slideUpFade {
   from {
     opacity: 0;
-    transform: translateY(22px) scale(0.97);
+    transform: translateY(60px) rotate(3deg);
     filter: blur(8px);
   }
   to {
     opacity: 1;
-    transform: translateY(0) scale(1);
+    transform: translateY(0) rotate(0deg);
     filter: blur(0);
   }
+}
+
+/* Apple glow pulse on section entrance */
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(91, 33, 182, 0); }
+  50% { box-shadow: 0 0 40px 8px rgba(91, 33, 182, 0.12); }
+}
+
+/* Ambient orb drift */
+@keyframes orbDrift {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(30px, -20px) scale(1.05); }
+  50% { transform: translate(-20px, 20px) scale(0.95); }
+  75% { transform: translate(20px, 10px) scale(1.02); }
+}
+
+/* Particle float up */
+@keyframes particleRise {
+  0% { opacity: 0; transform: translateY(0) scale(0); }
+  10% { opacity: 1; }
+  90% { opacity: 0.6; }
+  100% { opacity: 0; transform: translateY(-120px) scale(1.5); }
+}
+
+/* Apple-style ripple on click */
+@keyframes ripple {
+  0% { transform: scale(0); opacity: 0.6; }
+  100% { transform: scale(4); opacity: 0; }
+}
+
+/* Timeline item: slide + expand from left edge */
+@keyframes timelineSlide {
+  from {
+    opacity: 0;
+    transform: translateX(-30px) scaleY(0.85);
+    filter: blur(6px);
+    clip-path: inset(0% 100% 0% 0% round 16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scaleY(1);
+    filter: blur(0);
+    clip-path: inset(0% 0% 0% 0% round 16px);
+  }
+}
+
+/* Stat number count-up bounce */
+@keyframes statBounce {
+  0% { transform: scale(0.5) translateY(20px); opacity: 0; }
+  60% { transform: scale(1.1) translateY(-4px); opacity: 1; }
+  80% { transform: scale(0.96) translateY(2px); }
+  100% { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+/* Skill bar animated fill with spring */
+@keyframes barFill {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+/* Continuous gradient border rotation */
+@keyframes gradientBorder {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+/* Section header word slide */
+@keyframes wordReveal {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+    clip-path: inset(0 0 100% 0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    clip-path: inset(0 0 0% 0);
+  }
+}
+
+/* Magnetic hover glow expand */
+@keyframes magneticGlow {
+  from { box-shadow: 0 4px 20px rgba(91, 33, 182, 0.05); }
+  to { box-shadow: 0 20px 60px rgba(91, 33, 182, 0.2), 0 8px 24px rgba(0, 128, 96, 0.1); }
+}
+
+/* Logo shimmer sweep */
+@keyframes logoShimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
 }
 
 /* ==========================================
