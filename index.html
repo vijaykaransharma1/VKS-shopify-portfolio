@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vijay Karan Sharma | Expert Shopify Developer</title>
+  <title>Vijay Karan Sharma | Expert Shopify Developer & Performance Marketing Specialist</title>
 
   <!-- SEO Meta Tags -->
-  <meta name="description" content="Vijay Karan Sharma – Expert Shopify Developer with 3+ years of experience. Specializing in Liquid, custom theme development, Headless Shopify, CRO, and performance optimization.">
-  <meta name="keywords" content="Expert Shopify Developer, Liquid Developer, Shopify Theme Customization, Figma to Shopify, Shopify Headless, Shopify Plus, CRO, Vijay Karan Sharma">
+  <meta name="description" content="Vijay Karan Sharma – Expert Shopify Developer & Performance Marketing Specialist with 3+ years of experience. Specializing in Liquid, custom theme development, Meta Ads, Google Ads, Facebook Ads, CRO, and e-commerce growth.">
+  <meta name="keywords" content="Expert Shopify Developer, Liquid Developer, Shopify Theme Customization, Figma to Shopify, Shopify Headless, Shopify Plus, CRO, Performance Marketing, Meta Ads Expert, Facebook Ads, Google Ads, ROAS Optimization, E-commerce Ads, Vijay Karan Sharma">
   <meta name="author" content="Vijay Karan Sharma">
-  <meta property="og:title" content="Vijay Karan Sharma | Expert Shopify Developer">
-  <meta property="og:description" content="Custom Shopify Solutions – Theme Development, Speed Optimization, Liquid Coding & E-commerce Growth.">
+  <meta property="og:title" content="Vijay Karan Sharma | Shopify Developer & Performance Marketing Expert">
+  <meta property="og:description" content="Custom Shopify Solutions + Performance Marketing – Theme Development, Meta Ads, Google Ads, Speed Optimization, Liquid Coding & E-commerce Growth.">
   <meta property="og:type" content="website">
 
   <!-- Fonts -->
@@ -25,12 +25,26 @@
   <link rel="stylesheet" href="style.css">
 
   <!-- React & Babel -->
-  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
-  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.development.js" crossorigin></script>
+  <script src="https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://cdn.jsdelivr.net/npm/@babel/standalone@7.23.5/babel.min.js"></script>
+  <script>
+    // Safety check — show a helpful message if CDN scripts fail
+    window.addEventListener('error', function(e) {
+      if (e.message && e.message.includes('Babel')) {
+        document.getElementById('root').innerHTML = '<div style="padding:40px;font-family:sans-serif;color:#333"><h2>⚠️ Loading Error</h2><p>Babel failed to load. Please check your internet connection and refresh.</p></div>';
+      }
+    }, true);
+  </script>
 </head>
 <body>
-  <div id="root"></div>
+  <div id="root">
+    <div id="app-loading" style="position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#0a0a0a;z-index:9999;gap:16px;">
+      <div style="width:56px;height:56px;border:3px solid #1a1a1a;border-top-color:#008060;border-radius:50%;animation:spin 0.8s linear infinite;"></div>
+      <p style="color:#888;font-family:Inter,sans-serif;font-size:14px;margin:0;">Loading portfolio...</p>
+    </div>
+    <style>#app-loading{transition:opacity 0.4s}@keyframes spin{to{transform:rotate(360deg)}}</style>
+  </div>
 
   <script type="text/babel">
     const { useState, useEffect, useRef } = React;
@@ -42,11 +56,11 @@
       profile: {
         name: "Vijay Karan Sharma",
         title: "Expert Shopify Developer",
-        subtitle: "Shopify Theme Architect & E-commerce Growth Specialist",
+        subtitle: "Shopify Theme Architect & Performance Marketing Specialist",
         email: "vijaykaransharma1@gmail.com",
         phone: "+919459009099",
         location: "Joginder Nagar, H.P., India",
-        summary: "Expert Shopify Developer with 3+ years of hands-on experience building, customizing, and optimizing high-performance Shopify stores. Deep specialist in Liquid templating, custom theme architecture, Headless Shopify, and Shopify Plus — delivering pixel-perfect implementations that convert visitors into customers.",
+        summary: "Expert Shopify Developer & Performance Marketing Specialist with 3+ years of hands-on experience building, customizing, and scaling high-performance Shopify stores. Deep specialist in Liquid templating, custom theme architecture, Headless Shopify, Meta Ads, Google Ads, and CRO — delivering pixel-perfect implementations and data-driven ad campaigns that convert visitors into customers and maximize ROAS.",
         stats: [
           { number: "3+", label: "Years Experience", icon: "fa-solid fa-calendar-check" },
           { number: "50+", label: "Projects Delivered", icon: "fa-solid fa-rocket" },
@@ -77,7 +91,11 @@
         { name: "SEO & Structured Data", desc: "Schema markup, JSON-LD, meta optimization, canonical tags, and technical SEO for Shopify stores.", category: "performance", icon: "fa-solid fa-magnifying-glass", level: 86 },
 
         // Marketing & Growth
-        { name: "Marketing Platform Integrations", desc: "Facebook Pixel, Meta Ads, Google Ads, GTM setup, TikTok Pixel, and Klaviyo email flows.", category: "marketing", icon: "fa-solid fa-bullhorn", level: 84 },
+        { name: "Meta & Facebook Ads (Performance)", desc: "Full-funnel Meta Ads management — audience research, creative strategy, campaign setup, A/B testing, scaling, and ROAS optimization for Shopify stores.", category: "marketing", icon: "fa-brands fa-meta", level: 92 },
+        { name: "Google Ads & Shopping Campaigns", desc: "Google Search, Shopping, Display & Performance Max campaigns — keyword strategy, bid management, product feed optimization, and conversion tracking.", category: "marketing", icon: "fa-brands fa-google", level: 88 },
+        { name: "Instagram & Social Ads", desc: "Instagram Ads, Reels Ads, creative brief writing, UGC-style ads, pixel setup, and retargeting funnels for DTC e-commerce brands.", category: "marketing", icon: "fa-brands fa-instagram", level: 82 },
+        { name: "Marketing Analytics & Tracking", desc: "Facebook Pixel, GTM setup, GA4, conversion API (CAPI), server-side tracking, attribution modeling, and Klaviyo email flows integration.", category: "marketing", icon: "fa-solid fa-chart-mixed", level: 86 },
+        { name: "CRO & Landing Page Optimization", desc: "A/B testing, UX improvements, trust signals, advertorial pages, checkout UX optimization, and data-driven conversion rate improvements.", category: "marketing", icon: "fa-solid fa-chart-line", level: 90 },
         { name: "App Replacement Engineering", desc: "Replacing expensive paid Shopify apps with custom Liquid/JS solutions to cut costs and boost performance.", category: "marketing", icon: "fa-solid fa-puzzle-piece", level: 96 },
 
         // Tools & Deployment
@@ -272,6 +290,32 @@
           result: "LCP < 1s · 100 Lighthouse score",
           tech: ["Hydrogen", "Storefront API", "React", "Remix"],
           icon: "fa-solid fa-atom"
+        },
+
+        // ── PERFORMANCE MARKETING ──────────────────────────────
+        {
+          title: "Meta Ads Scaling — DTC Fashion Brand",
+          desc: "Took a struggling fashion Shopify store from break-even to 4.2x ROAS. Restructured Meta campaigns with CBO, built creative testing framework with 8 ad variations per week, implemented Advantage+ Shopping Campaigns, and set up server-side CAPI for accurate attribution post-iOS 14.",
+          tag: "Performance Marketing",
+          result: "ROAS: 1.1x → 4.2x · Revenue ↑ 3.8x",
+          tech: ["Meta Ads", "CAPI", "Advantage+", "Creative Testing"],
+          icon: "fa-brands fa-meta"
+        },
+        {
+          title: "Google Shopping & Performance Max",
+          desc: "Optimized product feed for a health supplements store, removing poor-performing SKUs, rewriting titles with high-intent keywords, and restructuring campaigns. Migrated to PMax with audience signals built from Klaviyo lists. CPC dropped 38%, conversion rate doubled.",
+          tag: "Performance Marketing",
+          result: "CPC ↓ 38% · Conv. rate ×2 · ROAS 5.1x",
+          tech: ["Google Ads", "PMax", "Shopping Feed", "GA4"],
+          icon: "fa-brands fa-google"
+        },
+        {
+          title: "Full-Funnel Ads Rebuild — Home Decor",
+          desc: "Rebuilt ad account from scratch for a home decor Shopify brand. Built TOF with UGC video creative, MOF with retargeting catalog ads, and BOF with dynamic product ads. Implemented Klaviyo flows triggered by ad engagement. Reduced CAC from $48 to $19 in 60 days.",
+          tag: "Performance Marketing",
+          result: "CAC: $48 → $19 · 60-day turnaround",
+          tech: ["Meta Ads", "Instagram Ads", "Klaviyo", "UGC Creative"],
+          icon: "fa-solid fa-bullseye"
         }
       ],
 
@@ -461,9 +505,11 @@
       const typewriterText = useTypewriter([
         "Expert Shopify Developer",
         "Liquid Theme Architect",
-        "E-commerce Growth Specialist",
+        "Performance Marketing Expert",
+        "Meta & Google Ads Specialist",
+        "E-commerce Growth Strategist",
         "Shopify Plus Developer",
-        "CRO & Performance Expert"
+        "CRO & ROAS Optimizer"
       ]);
 
       // Scroll reveal
@@ -528,7 +574,8 @@
         'figma': 'figma to shopify',
         'performance': 'performance',
         'headless': 'headless',
-        'cart': 'cart'
+        'cart': 'cart',
+        'ads': 'performance marketing'
       };
 
       const filteredProjects = projectFilter === 'all'
@@ -610,13 +657,14 @@
 
           {/* ==================== HERO ==================== */}
           <section id="home" className="hero">
-            <div className="hero-bg-dots"></div>
+            <div className="hero-mesh"></div>
 
             <div className="container hero-grid">
-              {/* Left: Text */}
+
+              {/* LEFT: Text */}
               <div>
                 <span className="hero-tagline reveal">
-                  <i className="fa-brands fa-shopify"></i> Shopify Expert Available for Hire
+                  <i className="fa-brands fa-shopify"></i> Shopify Developer &amp; Performance Marketing Expert
                 </span>
 
                 <h1 className="hero-title reveal" style={{ transitionDelay: '0.1s' }}>
@@ -649,7 +697,7 @@
                   <a href={`mailto:${RESUME_DATA.profile.email}`} className="social-circle" title="Email Me" id="hero-email-btn">
                     <i className="fa-solid fa-envelope"></i>
                   </a>
-                  <a href={`tel:${RESUME_DATA.profile.phone}`} className="social-circle" title="WhatsApp / Call" id="hero-phone-btn">
+                  <a href={`tel:${RESUME_DATA.profile.phone}`} className="social-circle" title="Call / WhatsApp" id="hero-phone-btn">
                     <i className="fa-brands fa-whatsapp"></i>
                   </a>
                   <a href="#contact" onClick={e => { e.preventDefault(); handleNavClick('contact'); }} className="social-circle" title="Contact Form" id="hero-contact-btn">
@@ -658,33 +706,78 @@
                 </div>
               </div>
 
-              {/* Right: Avatar */}
+              {/* RIGHT: Avatar with badges */}
               <div className="avatar-container reveal-right" style={{ transitionDelay: '0.2s' }}>
-                <div className="avatar-ring avatar-ring-1"></div>
-                <div className="avatar-ring avatar-ring-2"></div>
 
+                {/* Blob glow */}
+                <div className="avatar-blob-bg"></div>
+
+                {/* Orbit dots */}
+                <div className="orbit-dot orbit-dot-1"></div>
+                <div className="orbit-dot orbit-dot-2"></div>
+                <div className="orbit-dot orbit-dot-3"></div>
+                <div className="orbit-dot orbit-dot-4"></div>
+
+                {/* Ghost trail rings */}
+                <div className="orbit-trail orbit-trail-1"></div>
+                <div className="orbit-trail orbit-trail-2"></div>
+
+                {/* Shopify Expert badge — top-right corner of frame */}
+                <div className="floating-badge badge-shopify">
+                  <div className="fbadge-icon fbadge-green">
+                    <i className="fa-brands fa-shopify"></i>
+                  </div>
+                  <div className="fbadge-body">
+                    <div className="fbadge-label">Shopify Expert</div>
+                    <div className="fbadge-value">50+ Projects</div>
+                    <div className="fbadge-stars">
+                      <i className="fa-solid fa-star"></i>
+                      <i className="fa-solid fa-star"></i>
+                      <i className="fa-solid fa-star"></i>
+                      <i className="fa-solid fa-star"></i>
+                      <i className="fa-solid fa-star"></i>
+                      <span>5.0</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Avatar photo */}
                 <div className="avatar-frame">
                   <img src="assets/developer_avatarnew.jpeg" alt="Vijay Karan Sharma – Expert Shopify Developer" className="avatar-image" />
                 </div>
 
-                <div className="floating-badge badge-shopify">
-                  <div className="badge-icon"><i className="fa-solid fa-award"></i></div>
-                  <div className="badge-text">
-                    <div>Experience</div>
-                    <strong>3+ Years</strong>
+                {/* Performance badge — bottom-left corner of frame */}
+                <div className="floating-badge badge-code">
+                  <div className="fbadge-icon fbadge-purple">
+                    <i className="fa-solid fa-bullseye"></i>
+                  </div>
+                  <div className="fbadge-body">
+                    <div className="fbadge-label">Performance Marketing</div>
+                    <div className="fbadge-value">Avg. 4.2x ROAS</div>
+                    <div className="fbadge-metric">
+                      <span className="fbadge-up"><i className="fa-solid fa-arrow-trend-up"></i> Meta · Google Ads</span>
+                    </div>
                   </div>
                 </div>
 
-                <div className="floating-badge badge-code">
-                  <div className="badge-icon"><i className="fa-solid fa-gem"></i></div>
-                  <div className="badge-text">
-                    <div>Specialty</div>
-                    <strong>Liquid & Shopify</strong>
-                  </div>
-                </div>
+              </div>
+
+            </div>
+
+            {/* Marquee skills ticker */}
+            <div className="hero-marquee-wrap">
+              <div className="hero-marquee-track">
+                {['Shopify Liquid', 'Meta Ads', 'Google Ads', 'CRO & ROAS', 'Shopify Plus', 'Performance Max', 'Headless Shopify', 'YouTube Ads', 'Figma to Shopify', 'Core Web Vitals', 'Klaviyo', 'Advantage+',
+                  'Shopify Liquid', 'Meta Ads', 'Google Ads', 'CRO & ROAS', 'Shopify Plus', 'Performance Max', 'Headless Shopify', 'YouTube Ads', 'Figma to Shopify', 'Core Web Vitals', 'Klaviyo', 'Advantage+'].map((item, i) => (
+                  <span key={i} className="marquee-item" aria-hidden={i >= 12}>
+                    <i className="fa-solid fa-diamond marquee-dot"></i> {item}
+                  </span>
+                ))}
               </div>
             </div>
+
           </section>
+
 
           {/* ==================== STATS ==================== */}
           <section className="stats">
@@ -703,8 +796,8 @@
               <div className="section-header reveal">
                 <span className="section-tag green-tag"><i className="fa-solid fa-bolt"></i> Expertise</span>
                 <div className="section-divider"></div>
-                <h2 className="section-title">In-Demand <span>Shopify Skills</span></h2>
-                <p className="section-desc">Highly specialized in Shopify's entire ecosystem — from Liquid theme development to Headless Hydrogen, Shopify Plus, and advanced e-commerce growth strategies.</p>
+                <h2 className="section-title">Shopify Dev <span>&amp; Performance Marketing</span></h2>
+                <p className="section-desc">Dual expertise in Shopify's entire ecosystem — Liquid theme development, Headless Hydrogen, Shopify Plus — combined with data-driven performance marketing via Meta Ads, Google Ads, CRO &amp; ROAS optimization.</p>
               </div>
 
               <div className="skills-tabs reveal">
@@ -713,7 +806,7 @@
                   { key: 'core', label: 'Core Dev' },
                   { key: 'shopify', label: 'Shopify Platform' },
                   { key: 'performance', label: 'Performance & SEO' },
-                  { key: 'marketing', label: 'Growth & Marketing' },
+                  { key: 'marketing', label: '🚀 Performance Marketing' },
                   { key: 'tools', label: 'Tools & Deployment' }
                 ].map(tab => (
                   <button
@@ -727,9 +820,9 @@
                 ))}
               </div>
 
-              <div className="skills-grid stagger-children">
+              <div key={skillFilter} className="skills-grid tab-animate-grid">
                 {filteredSkills.map((skill, idx) => (
-                  <div key={idx} className="skill-card reveal">
+                  <div key={idx} className="skill-card tab-card-enter" style={{ animationDelay: `${idx * 0.06}s` }}>
                     <div className="skill-icon">
                       <i className={skill.icon}></i>
                     </div>
@@ -805,6 +898,7 @@
                   { key: 'custom', label: 'App Replacements' },
                   { key: 'figma', label: 'Figma to Shopify' },
                   { key: 'performance', label: 'Optimization' },
+                  { key: 'ads', label: '🚀 Ads & Marketing' },
                   { key: 'headless', label: 'Headless' }
                 ].map(tab => (
                   <button
@@ -818,11 +912,13 @@
                 ))}
               </div>
 
-              <div className="projects-grid stagger-children">
+              <div key={projectFilter} className="projects-grid tab-animate-grid">
                 {filteredProjects.map((project, idx) => (
-                  <div key={`${projectFilter}-${idx}`} className="project-card">
+                  <div key={idx} className="project-card tab-card-enter" style={{ animationDelay: `${idx * 0.07}s` }}>
                     <div className="project-header">
-                      <i className={project.icon}></i>
+                      <div className="project-icon-wrap">
+                        <i className={project.icon}></i>
+                      </div>
                       <span className="project-badge">{project.tag}</span>
                     </div>
                     <div className="project-body">
@@ -836,6 +932,8 @@
                           <span>{project.result}</span>
                         </div>
                       )}
+
+
 
                       <div className="project-links">
                         <a href="#contact" onClick={e => { e.preventDefault(); handleNavClick('contact'); }} className="project-link">
@@ -948,8 +1046,8 @@
             <div className="container">
               {/* Hero Banner */}
               <div className="contact-hero-banner reveal">
-                <h2><i className="fa-solid fa-handshake" style={{ marginRight: '12px' }}></i>Let's Build Something Amazing</h2>
-                <p>Have a Shopify store that needs expert development, theme optimization, or a full custom build? I'd love to help. Let's connect!</p>
+                <h2><i className="fa-solid fa-handshake" style={{ marginRight: '12px' }}></i>Let's Build &amp; Scale Together</h2>
+                <p>Need a high-converting Shopify store, pixel-perfect theme build, or expert Meta &amp; Google Ads management? Let's turn your brand into a revenue machine.</p>
               </div>
 
               <div className="contact-grid">
@@ -1085,7 +1183,7 @@
                     <i className="fa-brands fa-shopify"></i>
                     Vijay Karan Sharma
                   </div>
-                  <p>Expert Shopify Developer building high-performance stores with Liquid, custom themes, and e-commerce growth strategies. Available for remote projects worldwide.</p>
+                  <p>Expert Shopify Developer &amp; Performance Marketing Specialist — building high-converting stores with Liquid, custom themes, Meta Ads, Google Ads, and data-driven growth strategies. Available for remote projects worldwide.</p>
                 </div>
 
                 <div className="footer-col">
@@ -1106,7 +1204,9 @@
                   <ul>
                     <li><a href="#contact" onClick={e => { e.preventDefault(); handleNavClick('contact'); }}>Custom Theme Dev</a></li>
                     <li><a href="#contact" onClick={e => { e.preventDefault(); handleNavClick('contact'); }}>Figma to Shopify</a></li>
-                    <li><a href="#contact" onClick={e => { e.preventDefault(); handleNavClick('contact'); }}>Performance Optimization</a></li>
+                    <li><a href="#contact" onClick={e => { e.preventDefault(); handleNavClick('contact'); }}>Meta &amp; Google Ads</a></li>
+                    <li><a href="#contact" onClick={e => { e.preventDefault(); handleNavClick('contact'); }}>Performance Marketing</a></li>
+                    <li><a href="#contact" onClick={e => { e.preventDefault(); handleNavClick('contact'); }}>CRO &amp; ROAS Optimization</a></li>
                     <li><a href="#contact" onClick={e => { e.preventDefault(); handleNavClick('contact'); }}>Shopify Plus</a></li>
                     <li><a href="#contact" onClick={e => { e.preventDefault(); handleNavClick('contact'); }}>Headless Shopify</a></li>
                   </ul>
@@ -1417,7 +1517,7 @@
            ============================================= */
         const dividers = document.querySelectorAll('.section-divider');
         dividers.forEach(function(div) {
-          div.style.background = 'linear-gradient(90deg, #008060, #5b21b6, #06b6d4, #5b21b6, #008060)';
+          div.style.background = 'linear-gradient(90deg, #008060, #0071e3, #06b6d4, #0071e3, #008060)';
           div.style.backgroundSize = '300% 100%';
           div.style.animation = 'gradient-shift 4s ease infinite';
         });
