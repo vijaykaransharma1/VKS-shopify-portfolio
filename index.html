@@ -58,16 +58,18 @@
         ]
       },
 
-      recentClients: [
-        "Éclat Maison",
-        "Zisthi",
-        "Stosi",
-        "Escapedie",
-        "Musk Have Shop",
-        "White Chalk Clothing",
-        "AMDC Digital",
-        "Apex Consulting",
-        "Infinity E Services"
+      marqueeSkills: [
+        { name: "Shopify Liquid", icon: "fa-solid fa-code" },
+        { name: "Custom Theme Architecture", icon: "fa-solid fa-layer-group" },
+        { name: "App Alternatives", icon: "fa-solid fa-puzzle-piece" },
+        { name: "Ajax Cart & Drawer", icon: "fa-solid fa-cart-shopping" },
+        { name: "Metafields & Metaobjects", icon: "fa-solid fa-database" },
+        { name: "Figma to Shopify", icon: "fa-brands fa-figma" },
+        { name: "Store Speed (Lighthouse 90+)", icon: "fa-solid fa-gauge-high" },
+        { name: "WhatsApp Automations", icon: "fa-brands fa-whatsapp" },
+        { name: "Shopify APIs & Webhooks", icon: "fa-solid fa-circle-nodes" },
+        { name: "React & TypeScript", icon: "fa-brands fa-react" },
+        { name: "Bug Fixing & Maintenance", icon: "fa-solid fa-bug" }
       ],
 
       skills: [
@@ -688,13 +690,13 @@
             </div>
           </section>
 
-          {/* ==================== CLIENT MARQUEE RIBBON ==================== */}
+          {/* ==================== SKILLS MARQUEE RIBBON ==================== */}
           <div className="brand-marquee-section">
             <div className="brand-marquee-track">
-              {[...DATA.recentClients, ...DATA.recentClients, ...DATA.recentClients].map((client, idx) => (
+              {[...DATA.marqueeSkills, ...DATA.marqueeSkills, ...DATA.marqueeSkills].map((item, idx) => (
                 <span key={idx} className="brand-marquee-item">
-                  <i className="fa-solid fa-arrow-trend-up" style={{ fontSize: '0.75rem', opacity: 0.8 }}></i>
-                  {client}
+                  <i className={item.icon} style={{ fontSize: '0.8rem', opacity: 0.9 }}></i>
+                  {item.name}
                   <span className="brand-marquee-sep">✦</span>
                 </span>
               ))}
