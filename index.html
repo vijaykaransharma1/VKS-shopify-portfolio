@@ -761,24 +761,9 @@
                       </div>
                     </div>
 
-                    <div>
-                      {project.domain && (
-                        <div className="proj-domain">
-                          <i className="fa-solid fa-link" style={{ fontSize: '0.65rem', marginRight: '4px' }}></i>
-                          {project.domain}
-                        </div>
-                      )}
-                      <h3 className="proj-title" style={{ marginTop: '0.35rem' }}>{project.title}</h3>
-                    </div>
+                    <h3 className="proj-title">{project.title}</h3>
 
                     <p className="proj-desc">{project.desc}</p>
-
-                    {project.result && (
-                      <div className="proj-result">
-                        <i className="fa-solid fa-circle-check"></i>
-                        <span>{project.result}</span>
-                      </div>
-                    )}
 
                     <div className="proj-tech-row">
                       {project.tech.map((t, tIdx) => (
@@ -797,21 +782,13 @@
                         >
                           Visit Live Store <i className="fa-solid fa-arrow-up-right-from-square"></i>
                         </a>
-                      ) : (
-                        <a
-                          href="#contact"
-                          onClick={e => { e.preventDefault(); handleNavClick('contact'); }}
-                          className="proj-cta"
-                        >
-                          View Architecture <i className="fa-solid fa-arrow-right"></i>
-                        </a>
-                      )}
+                      ) : null}
 
                       <a
                         href="#contact"
                         onClick={e => { e.preventDefault(); handleNavClick('contact'); }}
                         className="proj-cta"
-                        style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}
+                        style={{ marginLeft: project.url ? '0' : 'auto' }}
                       >
                         Discuss <i className="fa-solid fa-arrow-right"></i>
                       </a>
