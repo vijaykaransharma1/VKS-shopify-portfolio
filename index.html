@@ -3,48 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vijay Karan Sharma | Expert Shopify Developer & Performance Marketing Specialist</title>
+  <title>Vijay Karan Sharma | Shopify Developer & E-Commerce Architect</title>
 
   <!-- SEO Meta Tags -->
-  <meta name="description" content="Vijay Karan Sharma – Expert Shopify Developer & Performance Marketing Specialist with 3+ years of experience. Specializing in Liquid, custom theme development, Meta Ads, Google Ads, Facebook Ads, CRO, and e-commerce growth.">
-  <meta name="keywords" content="Expert Shopify Developer, Liquid Developer, Shopify Theme Customization, Figma to Shopify, Shopify Headless, Shopify Plus, CRO, Performance Marketing, Meta Ads Expert, Facebook Ads, Google Ads, ROAS Optimization, E-commerce Ads, Vijay Karan Sharma">
+  <meta name="description" content="Vijay Karan Sharma — Shopify Developer with 3+ years experience. Specializing in Shopify Liquid, custom themes, Figma to Shopify, integrations, performance optimization and conversion-focused storefronts.">
+  <meta name="keywords" content="Shopify Developer, Shopify Liquid Developer, Shopify Theme Developer, Shopify Custom Development, Figma to Shopify, E-commerce Developer, Shopify India, React Developer, Vijay Karan Sharma">
   <meta name="author" content="Vijay Karan Sharma">
-  <meta property="og:title" content="Vijay Karan Sharma | Shopify Developer & Performance Marketing Expert">
-  <meta property="og:description" content="Custom Shopify Solutions + Performance Marketing – Theme Development, Meta Ads, Google Ads, Speed Optimization, Liquid Coding & E-commerce Growth.">
+  <meta property="og:title" content="Vijay Karan Sharma | Shopify Developer & E-Commerce Architect">
+  <meta property="og:description" content="Building custom Shopify experiences, integrations, automations, performance-focused storefronts and modern web interfaces.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vijaykaransharma.vercel.app/">
 
-  <!-- Fonts -->
+  <!-- Google Fonts: Bricolage Grotesque, DM Sans, JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800;12..96,900&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- FontAwesome -->
+  <!-- FontAwesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
 
   <!-- React & Babel -->
-  <script src="https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.development.js" crossorigin></script>
-  <script src="https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.development.js" crossorigin></script>
-  <script src="https://cdn.jsdelivr.net/npm/@babel/standalone@7.23.5/babel.min.js"></script>
-  <script>
-    // Safety check — show a helpful message if CDN scripts fail
-    window.addEventListener('error', function(e) {
-      if (e.message && e.message.includes('Babel')) {
-        document.getElementById('root').innerHTML = '<div style="padding:40px;font-family:sans-serif;color:#333"><h2>⚠️ Loading Error</h2><p>Babel failed to load. Please check your internet connection and refresh.</p></div>';
-      }
-    }, true);
-  </script>
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 <body>
-  <div id="root">
-    <div id="app-loading" style="position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#0a0a0a;z-index:9999;gap:16px;">
-      <div style="width:56px;height:56px;border:3px solid #1a1a1a;border-top-color:#008060;border-radius:50%;animation:spin 0.8s linear infinite;"></div>
-      <p style="color:#888;font-family:Inter,sans-serif;font-size:14px;margin:0;">Loading portfolio...</p>
-    </div>
-    <style>#app-loading{transition:opacity 0.4s}@keyframes spin{to{transform:rotate(360deg)}}</style>
-  </div>
+  <div id="root"></div>
 
   <script type="text/babel">
     const { useState, useEffect, useRef } = React;
@@ -52,72 +39,84 @@
     // =============================================
     // DATA STORE
     // =============================================
-    const RESUME_DATA = {
+    const DATA = {
       profile: {
         name: "Vijay Karan Sharma",
-        title: "Expert Shopify Developer",
-        subtitle: "Shopify Theme Architect & Performance Marketing Specialist",
+        title: "Senior Shopify Developer & E-Commerce Architect",
+        subtitle: "Liquid Theme Architecture | Any Custom Feature | App Alternatives | Headless",
         email: "vijaykaransharma1@gmail.com",
         phone: "+919459009099",
-        location: "Joginder Nagar, H.P., India",
-        summary: "Expert Shopify Developer & Performance Marketing Specialist with 3+ years of hands-on experience building, customizing, and scaling high-performance Shopify stores. Deep specialist in Liquid templating, custom theme architecture, Headless Shopify, Meta Ads, Google Ads, and CRO — delivering pixel-perfect implementations and data-driven ad campaigns that convert visitors into customers and maximize ROAS.",
+        location: "Himachal Pradesh, India",
+        linkedin: "https://linkedin.com/in/vijaykaransharma",
+        resumeUrl: "./resume/vijay-karan-sharma-shopify-developer-09June2026.pdf",
+        bio: "I'm Vijay Karan Sharma, a dedicated Shopify Developer with 3+ years of intensive experience having worked across 50+ Shopify stores. Whether you need any complex functionality, bespoke Liquid theme architecture, app replacements to eliminate monthly bills, or zero-downtime troubleshooting — I build and ship it cleanly with pixel-perfect precision.",
         stats: [
-          { number: "3+", label: "Years Experience", icon: "fa-solid fa-calendar-check" },
-          { number: "50+", label: "Projects Delivered", icon: "fa-solid fa-rocket" },
-          { number: "15+", label: "Themes Customised", icon: "fa-solid fa-palette" },
-          { number: "100%", label: "Client Satisfaction", icon: "fa-solid fa-star" }
+          { number: "50+", label: "Stores Worked On" },
+          { number: "3+", label: "Years Experience" },
+          { number: "100%", label: "Custom Functionality" },
+          { number: "100%", label: "Remote Ready" }
         ]
       },
 
+      recentClients: [
+        "Éclat Maison",
+        "Zisthi",
+        "Stosi",
+        "Escapedie",
+        "Musk Have Shop",
+        "White Chalk Clothing",
+        "AMDC Digital",
+        "Apex Consulting",
+        "Infinity E Services"
+      ],
+
       skills: [
-        // Core Development
-        { name: "Shopify Liquid Development", desc: "Expert in advanced Liquid templating — custom filters, tags, section rendering API, and dynamic blocks.", category: "core", icon: "fa-brands fa-shopify", level: 98 },
-        { name: "Shopify Theme Architecture", desc: "Building scalable, performant themes with structured JSON schemas, sections, and modular block systems.", category: "core", icon: "fa-solid fa-layer-group", level: 96 },
-        { name: "Figma / PSD to Shopify", desc: "Pixel-perfect, fully responsive conversion of Figma & PSD designs into live Shopify themes.", category: "core", icon: "fa-solid fa-wand-magic-sparkles", level: 95 },
-        { name: "HTML5, CSS3 & JavaScript", desc: "Clean semantic markup, advanced CSS (Grid, Flexbox, animations) and ES6+ JavaScript for dynamic storefronts.", category: "core", icon: "fa-solid fa-code", level: 93 },
-        { name: "React Website Development", desc: "Building modern, interactive React apps and websites — component-driven UI, hooks, state management, and API integration.", category: "core", icon: "fa-brands fa-react", level: 85 },
-        { name: "Custom Website Development", desc: "Full custom website builds from scratch using HTML, CSS, JavaScript or React — no templates, fully tailored to brand.", category: "core", icon: "fa-solid fa-laptop-code", level: 92 },
+        // Core Shopify
+        { name: "Shopify Liquid Development", desc: "Custom Liquid templating — sections, blocks, dynamic JSON schema, filters, tags, dynamic product rules and section rendering API.", category: "shopify", icon: "fa-brands fa-shopify", level: 98 },
+        { name: "Shopify Theme Architecture", desc: "Building scalable, performant custom themes from scratch with modular architecture, zero app bloat, and clean code.", category: "shopify", icon: "fa-solid fa-layer-group", level: 96 },
+        { name: "Figma / PSD to Shopify", desc: "Pixel-perfect, fully responsive conversion of Figma and PSD designs into live, interactive Shopify storefronts.", category: "shopify", icon: "fa-brands fa-figma", level: 96 },
+        { name: "Custom Shopify Features & App Alternatives", desc: "Building native Liquid + JS alternatives for bundles, wishlists, upsells, and discounts — cutting recurring app subscription fees.", category: "shopify", icon: "fa-solid fa-puzzle-piece", level: 95 },
+        { name: "Metafields & Metaobjects", desc: "Advanced structured content modeling with Shopify Metafields, Metaobjects, dynamic templates, and automated schema.", category: "shopify", icon: "fa-solid fa-database", level: 94 },
+        { name: "Custom Cart & Checkout Logic", desc: "Drawer carts, conditional pricing rules, tiered free shipping progress bars, dynamic upsells, and ajax cart operations.", category: "shopify", icon: "fa-solid fa-cart-shopping", level: 95 },
+        { name: "Shopify APIs & Integrations", desc: "Shopify Storefront API, Admin API (REST & GraphQL), Klaviyo, Judge.me, WhatsApp checkout, and custom webhooks.", category: "shopify", icon: "fa-solid fa-circle-nodes", level: 88 },
+        { name: "Troubleshooting & Bug Fixing", desc: "Rapid debugging of live store issues, resolving theme conflicts, CSS glitches, and deploying production-safe fixes.", category: "shopify", icon: "fa-solid fa-bug", level: 96 },
 
-        // Shopify Platform
-        { name: "Shopify Plus & Enterprise", desc: "Shopify Plus scripts, checkout customization, B2B features, multi-currency, and large-scale store management.", category: "shopify", icon: "fa-solid fa-crown", level: 88 },
-        { name: "Headless & Hydrogen", desc: "Building headless Shopify storefronts using Shopify Hydrogen, Storefront API, and custom React integrations.", category: "shopify", icon: "fa-solid fa-atom", level: 82 },
-        { name: "Metafields & Metaobjects", desc: "Advanced dynamic content modeling with Metafields, Metaobjects, and JSON schema-driven page layouts.", category: "shopify", icon: "fa-solid fa-database", level: 94 },
-        { name: "Custom Cart & Checkout Logic", desc: "Drawer carts, upsells, conditional pricing banners, ajax cart operations, and checkout extensions.", category: "shopify", icon: "fa-solid fa-cart-shopping", level: 92 },
-        { name: "App Development & APIs", desc: "Integrating Storefront API, Admin API, webhooks, and building custom private Shopify apps.", category: "shopify", icon: "fa-solid fa-circle-nodes", level: 80 },
+        // Frontend
+        { name: "HTML5, Modern CSS & JavaScript", desc: "Semantic markup, modern CSS (Flexbox, Grid, animations) and vanilla ES6+ for dynamic interactions.", category: "frontend", icon: "fa-solid fa-code", level: 94 },
+        { name: "React Development", desc: "Building modern, component-driven web applications with React hooks, state management, and headless storefronts.", category: "frontend", icon: "fa-brands fa-react", level: 85 },
+        { name: "TypeScript", desc: "Type-safe frontend development with TypeScript — interfaces, generics, strict typing, and modern build tools.", category: "frontend", icon: "fa-solid fa-code-compare", level: 82 },
 
-        // Performance & SEO
-        { name: "Core Web Vitals Optimization", desc: "Diagnosing and fixing LCP, CLS, FID issues — reducing load times significantly via asset optimization.", category: "performance", icon: "fa-solid fa-gauge-high", level: 94 },
-        { name: "Conversion Rate Optimization (CRO)", desc: "A/B testing, UX improvements, trust signals, checkout UX, and data-driven conversion improvements.", category: "performance", icon: "fa-solid fa-chart-line", level: 88 },
-        { name: "SEO & Structured Data", desc: "Schema markup, JSON-LD, meta optimization, canonical tags, and technical SEO for Shopify stores.", category: "performance", icon: "fa-solid fa-magnifying-glass", level: 86 },
-
-        // Marketing & Growth
-        { name: "Meta & Facebook Ads (Performance)", desc: "Full-funnel Meta Ads management — audience research, creative strategy, campaign setup, A/B testing, scaling, and ROAS optimization for Shopify stores.", category: "marketing", icon: "fa-brands fa-meta", level: 92 },
-        { name: "Google Ads & Shopping Campaigns", desc: "Google Search, Shopping, Display & Performance Max campaigns — keyword strategy, bid management, product feed optimization, and conversion tracking.", category: "marketing", icon: "fa-brands fa-google", level: 88 },
-        { name: "Instagram & Social Ads", desc: "Instagram Ads, Reels Ads, creative brief writing, UGC-style ads, pixel setup, and retargeting funnels for DTC e-commerce brands.", category: "marketing", icon: "fa-brands fa-instagram", level: 82 },
-        { name: "Marketing Analytics & Tracking", desc: "Facebook Pixel, GTM setup, GA4, conversion API (CAPI), server-side tracking, attribution modeling, and Klaviyo email flows integration.", category: "marketing", icon: "fa-solid fa-chart-mixed", level: 86 },
-        { name: "CRO & Landing Page Optimization", desc: "A/B testing, UX improvements, trust signals, advertorial pages, checkout UX optimization, and data-driven conversion rate improvements.", category: "marketing", icon: "fa-solid fa-chart-line", level: 90 },
-        { name: "App Replacement Engineering", desc: "Replacing expensive paid Shopify apps with custom Liquid/JS solutions to cut costs and boost performance.", category: "marketing", icon: "fa-solid fa-puzzle-piece", level: 96 },
-
-        // Tools & Deployment
-        { name: "Shopify CLI", desc: "Professional theme development workflow — hot reload, theme push/pull, multi-env configs, and Shopify Dev previews.", category: "tools", icon: "fa-solid fa-terminal", level: 95 },
-        { name: "Git & GitHub", desc: "Version control for solo and team projects — branching strategies, pull requests, conflict resolution, and GitHub Actions.", category: "tools", icon: "fa-brands fa-github", level: 93 },
-        { name: "Vercel Deployment", desc: "Deploying React and Next.js projects on Vercel — CI/CD pipelines, environment variables, custom domains, and preview deployments.", category: "tools", icon: "fa-solid fa-rocket", level: 88 },
-        { name: "Figma Design to Code", desc: "Reading and implementing Figma design systems accurately — spacing tokens, component states, and responsive layouts.", category: "tools", icon: "fa-brands fa-figma", level: 90 },
+        // Optimization & Tools
+        { name: "Storefront Speed Optimization", desc: "Eliminating render-blocking scripts, image lazy-loading, critical CSS, and Core Web Vitals remediation (Lighthouse 90+).", category: "optimization", icon: "fa-solid fa-gauge-high", level: 92 },
+        { name: "Conversion Rate Optimization", desc: "UX audit, frictionless mobile checkout journeys, persuasive trust elements, urgency triggers, and strategic CTAs.", category: "optimization", icon: "fa-solid fa-chart-line", level: 90 },
+        { name: "Shopify CLI & Version Control", desc: "Theme development workflow with Shopify CLI, GitHub version control, theme pull/push, and multi-developer branching.", category: "tools", icon: "fa-brands fa-github", level: 94 },
+        { name: "WordPress & Elementor", desc: "Building responsive WordPress sites, custom landing pages, and migrating WordPress designs over to Shopify.", category: "tools", icon: "fa-brands fa-wordpress", level: 86 }
       ],
 
       experiences: [
+        {
+          role: "Head of Web Technology",
+          company: "Éclat Maison",
+          type: "Luxury Fragrance Brand · Part-Time",
+          duration: "June 2025 – Present",
+          bullets: [
+            "Heading web technology, full-stack Shopify development, and digital operations for luxury perfume brand (eclatmaison.in).",
+            "Managing store technical operations, orders workflow management, and backend process stability.",
+            "Architected automated WhatsApp messaging flows for order status notifications, abandoned cart recovery, and customer checkout concierge.",
+            "Engineered custom Shopify Liquid storefront sections, interactive fragrance note pyramids, and dynamic bundle builders.",
+            "Integrated Judge.me verified review ecosystem and conversion-rate optimization experiments."
+          ]
+        },
         {
           role: "Shopify Developer",
           company: "Apex Consulting",
           type: "Remote",
           duration: "Oct 2025 – Apr 2026",
           bullets: [
-            "Converted complex Figma designs into responsive Shopify themes with reusable sections and modular schema.",
-            "Built custom features using Liquid, JavaScript, and Metafields for dynamic product and content behavior.",
-            "Implemented advanced cart logic: conditional pricing, upsells, trust indicators, and ajax-based cart operations.",
-            "Integrated and configured third-party apps, resolving UI conflicts and improving performance.",
-            "Optimized storefront Core Web Vitals by removing unused scripts and lazy-loading assets.",
-            "Coordinated with designers and PMs to translate requirements into production-ready storefront features."
+            "Converted multi-screen Figma designs into responsive Shopify themes with reusable sections and custom JSON schemas.",
+            "Engineered custom Liquid functionality using JavaScript and Metafields for dynamic product variations and tier pricing.",
+            "Implemented advanced cart logic including conditional upsells, threshold-based free shipping bars, and ajax operations.",
+            "Audited storefront speed and stripped redundant third-party scripts, cutting total load time by over 40%."
           ]
         },
         {
@@ -126,11 +125,10 @@
           type: "Remote",
           duration: "Aug 2024 – Nov 2024",
           bullets: [
-            "Designed and developed custom Shopify themes tailored to specific client branding requirements.",
-            "Implemented advanced Liquid coding to enhance store functionality, metafields, and section schema.",
-            "Configured and optimized Shopify apps for seamless operation and performance.",
-            "Improved page load speed and user experience through code auditing and optimization.",
-            "Boosted blog SEO with structured data and keyword-driven content optimization."
+            "Designed and developed custom Shopify themes tailored to individual brand guidelines.",
+            "Wrote advanced Liquid logic for metafield-driven layouts and dynamic product recommendations.",
+            "Optimized live stores for mobile Core Web Vitals, elevating mobile performance scores from 30s to 90s.",
+            "Implemented on-page SEO best practices, structured schema markup, and blog optimizations."
           ]
         },
         {
@@ -139,10 +137,9 @@
           type: "Remote",
           duration: "May 2024 – Jun 2024",
           bullets: [
-            "Converted Figma designs into existing Shopify themes with pixel-perfect implementation and responsiveness.",
-            "Resolved Shopify store issues and bugs, improving store stability and user experience.",
-            "Installed and configured Shopify apps to enhance store features and integrations.",
-            "Provided Shopify theme support and ongoing maintenance to client stores."
+            "Converted Figma designs into production-ready Shopify sections with pixel-perfect responsive fidelity.",
+            "Resolved critical bugs and layout inconsistencies across diverse browser environments.",
+            "Configured third-party app integrations and customized theme liquid snippets."
           ]
         },
         {
@@ -151,224 +148,230 @@
           type: "Remote",
           duration: "Aug 2023 – Nov 2023",
           bullets: [
-            "Customized and modified Shopify themes for improved UI and brand aesthetics.",
-            "Integrated Shopify apps to extend store capabilities and automate workflows.",
-            "Built dynamic sections from mock-up designs using Liquid and JSON schemas.",
-            "Implemented custom Metafields for better content management flexibility for clients.",
-            "Adopted Shopify CLI for transparent, version-controlled theme change management."
-          ]
-        },
-        {
-          role: "Web Developer Intern",
-          company: "Brainquest Consultancy",
-          type: "Remote",
-          duration: "May 2023 – Jun 2023",
-          bullets: [
-            "Identified and resolved Shopify store bugs, improving overall functionality.",
-            "Worked on Liquid coding tasks to enhance store performance and feature set.",
-            "Assisted in theme customization and Shopify store initial setup.",
-            "Converted Figma designs to responsive Shopify sections."
-          ]
-        },
-        {
-          role: "Web Developer Intern – Shopify",
-          company: "Atomic House",
-          type: "Remote",
-          duration: "Feb 2023 – Apr 2023",
-          bullets: [
-            "Migrated WordPress sections and templates to Shopify with clean, performant code.",
-            "Conducted SEO keyword research and implemented blog optimization for better organic traffic.",
-            "Analyzed and improved store performance by removing redundant code and scripts.",
-            "Implemented custom Liquid code to enhance Shopify store functionality and user experience."
+            "Customized Shopify themes for improved brand storytelling and conversion aesthetics.",
+            "Created reusable section templates with customizable theme settings for non-technical store managers.",
+            "Implemented Shopify CLI workflows for team-based code collaboration."
           ]
         }
-      ],
-
-      education: {
-        degree: "B.B.A. • Grade: A+",
-        school: "H.P. University",
-        duration: "July 2018 – August 2021",
-        bullets: [
-          "Built a strong foundation in business management, marketing, finance, and HR practices.",
-          "Conducted market research projects analyzing consumer behavior and industry trends.",
-          "Developed analytical and problem-solving skills through case studies and group assignments.",
-          "Enhanced leadership and communication abilities via seminars and business events."
-        ]
-      },
-
-      languages: [
-        { name: "English", level: "Expert", score: 5 },
-        { name: "Hindi", level: "Expert", score: 5 }
       ],
 
       projects: [
-        // ── APP REPLACEMENTS ──────────────────────────────
+        // ==================== 1. Éclat Maison ====================
         {
-          title: "Custom Product Bundle Builder",
-          desc: "Replaced Bold Bundles ($39.99/mo) with a fully custom Liquid + JavaScript bundle engine. Customers can mix-and-match products, auto-discount applies in-cart, and the entire UI is built from scratch using Ajax Cart API — no app dependency, no extra JS payload.",
-          tag: "App Replacement",
-          result: "Saved $480/year · 0.8s faster load",
-          tech: ["Liquid", "Ajax Cart API", "JavaScript", "CSS Animations"],
-          icon: "fa-solid fa-cubes"
-        },
-        {
-          title: "Custom Wishlist System (No App)",
-          desc: "Replaced Wishlist Hero ($14.99/mo) by building a zero-dependency wishlist using Shopify Customer Metafields API + Liquid. Heart icon on product cards syncs to customer account. Works logged-in/out (localStorage fallback). Persists across sessions and devices.",
-          tag: "App Replacement",
-          result: "Saved $180/year · Works on all devices",
-          tech: ["Metafields API", "Liquid", "LocalStorage", "Fetch API"],
-          icon: "fa-solid fa-heart"
-        },
-        {
-          title: "Smart Upsell Drawer Engine",
-          desc: "Replaced ReConvert post-purchase upsells ($7.99/mo) with a custom slide-in drawer triggered on Add-to-Cart. Upsell products are pulled from metafields by collection rules. Conditional display logic hides irrelevant offers. Resulted in 14% AOV increase for the client.",
-          tag: "App Replacement",
-          result: "Saved $96/year · +14% AOV lift",
-          tech: ["Liquid", "Metafields", "Ajax API", "CSS Transitions"],
-          icon: "fa-solid fa-arrow-up-right-dots"
-        },
-        {
-          title: "Back-in-Stock Notification Form",
-          desc: "Replaced Back in Stock app ($19/mo) with a custom out-of-stock form integrated via Klaviyo API. When a variant is unavailable, a subscribe form appears. On restock, Klaviyo flow fires automatically. Built using Liquid variant checks + Klaviyo JS SDK integration.",
-          tag: "App Replacement",
-          result: "Saved $228/year · Email list grew 30%",
-          tech: ["Klaviyo API", "Liquid", "JavaScript", "Shopify Webhooks"],
-          icon: "fa-solid fa-bell"
+          title: "Éclat Maison",
+          domain: "eclatmaison.in",
+          desc: "Complete Shopify store development for a luxury fragrance and haute perfumery brand. Built custom scent pyramid sections, bespoke product storytelling pages, Judge.me reviews integration, and WhatsApp customer checkout concierge.",
+          tag: "Luxury Fragrance",
+          category: "client",
+          isLive: true,
+          url: "https://www.eclatmaison.in/",
+          result: "Live Production Store",
+          tech: ["Shopify Liquid", "Custom Theme", "Judge.me", "WhatsApp API", "UX Architecture"],
+          icon: "fa-solid fa-spray-can-sparkles"
         },
 
-        // ── FIGMA TO SHOPIFY ──────────────────────────────
+        // ==================== 2. Zisthi ====================
         {
-          title: "Premium Brand Theme — Figma to Shopify",
-          desc: "Converted a complex 40-screen Figma design system into a fully custom Shopify theme. Built 18 reusable sections with full schema controls — allowing the client's marketing team to manage layout, copy, colors, and media without touching code. Fully responsive, pixel-perfect.",
-          tag: "Figma to Shopify",
-          result: "Delivered in 3 weeks · 18 custom sections",
-          tech: ["Liquid Schema", "CSS Grid", "JavaScript", "Figma"],
-          icon: "fa-solid fa-pencil-ruler"
-        },
-        {
-          title: "Minimalist Fashion Store Rebuild",
-          desc: "Rebuilt a dated Dawn-based store from scratch using a custom Figma design. Added parallax hero, animated product carousels, sticky Add-to-Cart bar, mega navigation with image previews, and a custom size guide modal driven by product metafields per SKU.",
-          tag: "Figma to Shopify",
-          result: "Bounce rate ↓ 22% · Avg session +40s",
-          tech: ["Liquid", "Vanilla JS", "Metafields", "CSS Variables"],
+          title: "Zisthi",
+          domain: "zisthi.com",
+          desc: "Contemporary fashion and apparel storefront built for maximum speed and conversion. Features a modern editorial product grid, rapid collection filtering, sticky mobile Add-to-Cart, and seamless checkout experience.",
+          tag: "Fashion & Apparel",
+          category: "client",
+          isLive: true,
+          url: "https://www.zisthi.com/",
+          result: "Live Production Store",
+          tech: ["Shopify", "Liquid", "Ajax Filters", "Mobile-First UX", "CSS Grid"],
           icon: "fa-solid fa-shirt"
         },
 
-        // ── PERFORMANCE ──────────────────────────────
+        // ==================== 3. Stosi ====================
         {
-          title: "Core Web Vitals Speed Overhaul",
-          desc: "Diagnosed and fixed severe speed issues on an enterprise health brand store. Removed 11 conflicting app scripts, replaced heavy sliders with native CSS scroll-snap, lazy-loaded all images, and implemented critical CSS. Lighthouse score went from 34 → 91.",
+          title: "Stosi",
+          domain: "stosi.in",
+          desc: "End-to-end Shopify store development and customization for modern lifestyle goods. Implemented custom modular theme sections, performance optimizations, and an intuitive shopping journey.",
+          tag: "Lifestyle E-Commerce",
+          category: "client",
+          isLive: true,
+          url: "https://stosi.in/",
+          result: "Live Production Store",
+          tech: ["Shopify", "Liquid Theme", "Speed Optimization", "Custom Sections"],
+          icon: "fa-solid fa-store"
+        },
+
+        // ==================== 4. Escapedie ====================
+        {
+          title: "Escapedie",
+          domain: "escapedie.in",
+          desc: "Edgy streetwear and graphic apparel store featuring a high-impact urban aesthetic. Developed custom drop release countdowns, animated lookbook elements, slide-out drawer cart, and social proof triggers.",
+          tag: "Streetwear Brand",
+          category: "client",
+          isLive: true,
+          url: "https://escapedie.in/",
+          result: "Live Production Store",
+          tech: ["Shopify Liquid", "Cart Drawer", "JavaScript", "Micro-Animations"],
+          icon: "fa-solid fa-fire"
+        },
+
+        // ==================== 5. Musk Have Shop ====================
+        {
+          title: "Musk Have Shop",
+          domain: "muskhaveshop.com",
+          desc: "Artisanal perfumery boutique built with custom Shopify Liquid. Features interactive scent discoverability, custom bundle selections, clear customer reviews, and high-converting product pages.",
+          tag: "Niche Perfumery",
+          category: "client",
+          isLive: true,
+          url: "https://muskhaveshop.com/",
+          result: "Live Production Store",
+          tech: ["Shopify", "Liquid", "Bundle Architecture", "Conversion UX"],
+          icon: "fa-solid fa-bottle-droplet"
+        },
+
+        // ==================== 6. White Chalk Clothing ====================
+        {
+          title: "White Chalk Clothing",
+          domain: "whitechalkclothing.com",
+          desc: "Full Shopify store rebuild and customization for women's designer apparel. Engineered custom size guide modals, dynamic lookbook displays, seamless swatch selectors, and high-speed page loads.",
+          tag: "Women's Fashion",
+          category: "client",
+          isLive: true,
+          url: "https://whitechalkclothing.com/",
+          result: "Live Production Store",
+          tech: ["Shopify", "Liquid", "Lookbook UI", "Figma to Shopify", "Performance"],
+          icon: "fa-solid fa-vest"
+        },
+
+        // ==================== 7. AMDC Website ====================
+        {
+          title: "AMDC Digital Platform",
+          domain: "amdc-website.vercel.app",
+          desc: "Corporate digital web platform engineered with modern React frontend architecture and deployed on Vercel. Features high-performance interactive components, responsive typography, and crisp layout execution.",
+          tag: "Web Application",
+          category: "client",
+          isLive: true,
+          url: "https://amdc-website.vercel.app/",
+          result: "Live Web App on Vercel",
+          tech: ["React", "TypeScript", "Vercel", "Tailwind / CSS", "Modern Web"],
+          icon: "fa-solid fa-globe"
+        },
+
+        // ==================== 8. Custom Bundle Builder ====================
+        {
+          title: "Custom Bundle Builder Engine",
+          domain: "Internal Solution",
+          desc: "Replaced an expensive recurring bundle app ($39.99/mo) with a custom Liquid + Ajax cart engine. Customers mix-and-match products with automatic in-cart volume discounts — zero app bloat, zero recurring fee.",
+          tag: "App Replacement",
+          category: "engineering",
+          isLive: false,
+          result: "Saved $480/yr · 0.8s Faster",
+          tech: ["Liquid", "Ajax Cart API", "JavaScript", "CSS"],
+          icon: "fa-solid fa-cubes"
+        },
+
+        // ==================== 9. Custom Wishlist System ====================
+        {
+          title: "Zero-Bloat Wishlist System",
+          domain: "Internal Solution",
+          desc: "Replaced a paid wishlist app ($14.99/mo) with a zero-dependency wishlist using Shopify Customer Metafields API + Liquid. Operates for logged-in and guest users with localStorage fallback across devices.",
+          tag: "App Replacement",
+          category: "engineering",
+          isLive: false,
+          result: "Saved $180/yr · Zero Scripts",
+          tech: ["Metafields API", "Liquid", "LocalStorage", "Fetch API"],
+          icon: "fa-solid fa-heart"
+        },
+
+        // ==================== 10. Smart Upsell & Cart Drawer ====================
+        {
+          title: "Smart Upsell Drawer & Tiered Shipping",
+          domain: "Internal Solution",
+          desc: "Custom slide-in drawer cart triggered on Add-to-Cart. Features a live threshold progress bar ('Add $12 for Free Shipping!') and contextual upsell products pulled dynamically via Metafields.",
+          tag: "Cart & Checkout",
+          category: "engineering",
+          isLive: false,
+          result: "+18% Cart Conversion",
+          tech: ["Ajax Cart API", "Sections Rendering", "Liquid", "UX"],
+          icon: "fa-solid fa-cart-shopping"
+        },
+
+        // ==================== 11. Storefront Performance Overhaul ====================
+        {
+          title: "Storefront Speed & Core Web Vitals",
+          domain: "Performance Overhaul",
+          desc: "Comprehensive diagnostic and optimization: removed conflicting render-blocking app scripts, replaced heavy slider plugins with native CSS scroll-snap, and implemented critical CSS and image lazy loading.",
           tag: "Performance",
-          result: "Load: 5.4s → 1.8s · Score: 34 → 91",
-          tech: ["Lighthouse", "Critical CSS", "Lazy Load", "Liquid"],
+          category: "performance",
+          isLive: false,
+          result: "5.4s → 1.8s · Mobile Score 91",
+          tech: ["Lighthouse", "Core Web Vitals", "Critical CSS", "Code Audit"],
           icon: "fa-solid fa-gauge-high"
         },
-        {
-          title: "SEO Schema & Structured Data Setup",
-          desc: "Implemented full JSON-LD structured data (Product, BreadcrumbList, Organization, FAQPage) on a Shopify store. Fixed duplicate meta tags, canonical URL issues, and added Open Graph + Twitter Card meta. Store began ranking for 40+ new keywords within 8 weeks.",
-          tag: "Performance",
-          result: "+40 new rankings in 8 weeks",
-          tech: ["JSON-LD", "Open Graph", "Liquid", "Canonical Tags"],
-          icon: "fa-solid fa-magnifying-glass-chart"
-        },
 
-        // ── CHECKOUT / CART ──────────────────────────────
+        // ==================== 12. Figma to Shopify Design System ====================
         {
-          title: "Advanced Cart & Checkout Logic",
-          desc: "Implemented dynamic cart rules for a B2B Shopify store: free shipping threshold bar, conditional discount badges, minimum order warnings, and a trust badge drawer. Used Shopify Ajax Cart API + Liquid sections rendering API for zero page reloads.",
-          tag: "Cart & Checkout",
-          result: "Cart conversion ↑ 18%",
-          tech: ["Ajax Cart API", "Sections Rendering", "Liquid", "UX"],
-          icon: "fa-solid fa-basket-shopping"
-        },
-
-        // ── HEADLESS ──────────────────────────────
-        {
-          title: "Headless Storefront with Hydrogen",
-          desc: "Built a custom headless Shopify storefront using Hydrogen + Storefront API. Delivered ultra-fast RSC-powered page transitions, full cart management, and a React component library matching the brand's Figma design system. Sub-1s page loads across all routes.",
-          tag: "Headless",
-          result: "LCP < 1s · 100 Lighthouse score",
-          tech: ["Hydrogen", "Storefront API", "React", "Remix"],
-          icon: "fa-solid fa-atom"
-        },
-
-        // ── PERFORMANCE MARKETING ──────────────────────────────
-        {
-          title: "Meta Ads Scaling — DTC Fashion Brand",
-          desc: "Took a struggling fashion Shopify store from break-even to 4.2x ROAS. Restructured Meta campaigns with CBO, built creative testing framework with 8 ad variations per week, implemented Advantage+ Shopping Campaigns, and set up server-side CAPI for accurate attribution post-iOS 14.",
-          tag: "Performance Marketing",
-          result: "ROAS: 1.1x → 4.2x · Revenue ↑ 3.8x",
-          tech: ["Meta Ads", "CAPI", "Advantage+", "Creative Testing"],
-          icon: "fa-brands fa-meta"
-        },
-        {
-          title: "Google Shopping & Performance Max",
-          desc: "Optimized product feed for a health supplements store, removing poor-performing SKUs, rewriting titles with high-intent keywords, and restructuring campaigns. Migrated to PMax with audience signals built from Klaviyo lists. CPC dropped 38%, conversion rate doubled.",
-          tag: "Performance Marketing",
-          result: "CPC ↓ 38% · Conv. rate ×2 · ROAS 5.1x",
-          tech: ["Google Ads", "PMax", "Shopping Feed", "GA4"],
-          icon: "fa-brands fa-google"
-        },
-        {
-          title: "Full-Funnel Ads Rebuild — Home Decor",
-          desc: "Rebuilt ad account from scratch for a home decor Shopify brand. Built TOF with UGC video creative, MOF with retargeting catalog ads, and BOF with dynamic product ads. Implemented Klaviyo flows triggered by ad engagement. Reduced CAC from $48 to $19 in 60 days.",
-          tag: "Performance Marketing",
-          result: "CAC: $48 → $19 · 60-day turnaround",
-          tech: ["Meta Ads", "Instagram Ads", "Klaviyo", "UGC Creative"],
-          icon: "fa-solid fa-bullseye"
+          title: "Figma Design System to Shopify",
+          domain: "Custom Theme Build",
+          desc: "Converted a 35-screen Figma design system into a bespoke Shopify theme. Built 20+ modular, reusable sections with full theme customizer controls for the client's marketing team.",
+          tag: "Figma to Shopify",
+          category: "engineering",
+          isLive: false,
+          result: "Delivered in 3 Weeks",
+          tech: ["Liquid Schema", "CSS Grid", "JavaScript", "Figma"],
+          icon: "fa-solid fa-pen-ruler"
         }
       ],
 
+      services: [
+        { icon: "fa-brands fa-shopify", title: "Custom Shopify Stores", desc: "Building brand-new, bespoke Shopify stores tailored precisely to your brand aesthetics and business goals." },
+        { icon: "fa-solid fa-code", title: "Shopify Liquid Engineering", desc: "Custom sections, blocks, JSON templates, metafields modeling, and advanced dynamic Liquid functionality." },
+        { icon: "fa-brands fa-figma", title: "Figma to Shopify Conversion", desc: "Pixel-accurate, fully responsive transformation of Figma, Adobe XD, or PSD designs into functional stores." },
+        { icon: "fa-solid fa-cubes", title: "App Replacement & Cost Cutting", desc: "Replacing expensive monthly apps with lean, custom Liquid and JavaScript code to save money and boost speed." },
+        { icon: "fa-solid fa-gauge-high", title: "Page Speed & Core Web Vitals", desc: "Comprehensive store speed audits, cleaning redundant app scripts, and optimizing mobile load performance." },
+        { icon: "fa-solid fa-cart-shopping", title: "Custom Cart & Checkout UX", desc: "High-converting drawer carts, tiered free shipping progress bars, dynamic upsells, and trust boosters." },
+        { icon: "fa-brands fa-react", title: "React & Modern Web Apps", desc: "Developing interactive web applications and headless storefront interfaces with React and TypeScript." },
+        { icon: "fa-solid fa-bug", title: "Bug Fixing & Maintenance", desc: "Rapid troubleshooting of theme conflicts, broken layouts, checkout glitches, and zero-downtime updates." }
+      ],
+
       workflows: [
-        {
-          step: "01",
-          icon: "fa-solid fa-magnifying-glass-chart",
-          title: "Discovery & Strategy",
-          desc: "I start with a deep audit of your store — analyzing performance metrics, UX issues, design gaps, and business goals to create a tailored action plan.",
-          tools: ["Lighthouse", "PageSpeed Insights", "Hotjar", "Figma"]
-        },
-        {
-          step: "02",
-          icon: "fa-brands fa-figma",
-          title: "Design & Prototyping",
-          desc: "If designing from scratch, I craft pixel-perfect mockups in Figma. If working from existing designs, I validate responsiveness and interaction patterns.",
-          tools: ["Figma", "Adobe XD", "PSD", "Framer"]
-        },
-        {
-          step: "03",
-          icon: "fa-solid fa-code",
-          title: "Liquid Development",
-          desc: "Writing clean, scalable Shopify Liquid code — building dynamic sections, schema-driven blocks, metafield layouts, and custom JavaScript interactions.",
-          tools: ["Shopify CLI", "Liquid", "JavaScript", "GitHub"]
-        },
-        {
-          step: "04",
-          icon: "fa-solid fa-circle-nodes",
-          title: "Integrations & Apps",
-          desc: "Connecting third-party apps, Klaviyo, Pixel tracking, Meta Ads, GTM, and custom private app APIs — replacing costly apps with custom solutions where possible.",
-          tools: ["Shopify API", "Meta Pixel", "Klaviyo", "GTM"]
-        },
-        {
-          step: "05",
-          icon: "fa-solid fa-gauge-high",
-          title: "Performance & SEO",
-          desc: "Optimizing Core Web Vitals, implementing structured data, compressing assets, and reviewing loading strategies for maximum Lighthouse scores.",
-          tools: ["Web Vitals", "JSON-LD", "Lazy Load", "Lighthouse"]
-        },
-        {
-          step: "06",
-          icon: "fa-solid fa-rocket",
-          title: "Launch & Handoff",
-          desc: "Thorough QA testing across devices, staging → production deployment, client training, and post-launch monitoring to ensure everything runs flawlessly.",
-          tools: ["QA Testing", "Shopify CLI", "Docs", "Support"]
-        }
-      ]
+        { step: "01", icon: "fa-solid fa-magnifying-glass", title: "Discovery & Requirements", desc: "Understanding store objectives, brand identity, technical dependencies, and target KPIs.", tools: ["Store Audit", "Brief", "Scope"] },
+        { step: "02", icon: "fa-brands fa-figma", title: "Design & UX Validation", desc: "Reviewing Figma design files, interaction states, responsive layouts, and mobile experience.", tools: ["Figma", "UI System", "UX Flow"] },
+        { step: "03", icon: "fa-solid fa-code", title: "Liquid & Theme Build", desc: "Writing clean, scalable Liquid code, custom JSON schema sections, metafields, and vanilla JS.", tools: ["Shopify CLI", "Liquid", "JavaScript"] },
+        { step: "04", icon: "fa-solid fa-puzzle-piece", title: "Integrations & Functionality", desc: "Connecting review platforms, WhatsApp flows, custom cart logic, and payment configurations.", tools: ["Shopify API", "Apps", "Webhooks"] },
+        { step: "05", icon: "fa-solid fa-gauge-high", title: "Speed & Responsive QA", desc: "Multi-device testing, cross-browser validation, Lighthouse performance auditing, and code cleanup.", tools: ["Lighthouse", "DevTools", "QA"] },
+        { step: "06", icon: "fa-solid fa-rocket", title: "Launch & Post-Support", desc: "Safe staging-to-production deployment, theme publishing, and ongoing operational support.", tools: ["Shopify CLI", "GitHub", "Support"] }
+      ],
+
+      techStack: [
+        { name: "Shopify", icon: "fa-brands fa-shopify" },
+        { name: "Shopify Liquid", icon: "fa-solid fa-flask" },
+        { name: "JavaScript ES6+", icon: "fa-brands fa-js" },
+        { name: "React", icon: "fa-brands fa-react" },
+        { name: "TypeScript", icon: "fa-solid fa-code-compare" },
+        { name: "HTML5 & CSS3", icon: "fa-brands fa-html5" },
+        { name: "Shopify CLI", icon: "fa-solid fa-terminal" },
+        { name: "Storefront API", icon: "fa-solid fa-circle-nodes" },
+        { name: "Metafields / Metaobjects", icon: "fa-solid fa-database" },
+        { name: "Figma", icon: "fa-brands fa-figma" },
+        { name: "GitHub", icon: "fa-brands fa-github" },
+        { name: "Vercel", icon: "fa-solid fa-rocket" }
+      ],
+
+      education: {
+        degree: "B.B.A. (Bachelor of Business Administration)",
+        grade: "Grade: A+",
+        school: "H.P. University",
+        duration: "2018 – 2021",
+        bullets: [
+          "Strong foundation in business administration, marketing strategies, and finance.",
+          "Conducted market research analyzing consumer behavior and e-commerce retail trends.",
+          "Developed analytical problem-solving and strategic project execution skills."
+        ]
+      }
     };
 
     // =============================================
     // TYPEWRITER HOOK
     // =============================================
-    function useTypewriter(texts, speed = 80, pause = 2000) {
+    function useTypewriter(texts, speed = 70, pause = 2000) {
       const [displayText, setDisplayText] = useState('');
       const [isDeleting, setIsDeleting] = useState(false);
       const [textIndex, setTextIndex] = useState(0);
@@ -377,7 +380,6 @@
       useEffect(() => {
         const currentText = texts[textIndex];
         let timer;
-
         if (!isDeleting && charIndex < currentText.length) {
           timer = setTimeout(() => setCharIndex(c => c + 1), speed);
         } else if (!isDeleting && charIndex === currentText.length) {
@@ -388,7 +390,6 @@
           setIsDeleting(false);
           setTextIndex(i => (i + 1) % texts.length);
         }
-
         setDisplayText(currentText.slice(0, charIndex));
         return () => clearTimeout(timer);
       }, [charIndex, isDeleting, textIndex, texts, speed, pause]);
@@ -397,28 +398,24 @@
     }
 
     // =============================================
-    // SCROLL REVEAL HOOK  (MutationObserver version)
+    // SCROLL REVEAL HOOK
     // =============================================
     function useScrollReveal() {
       useEffect(() => {
-        const SELECTOR = '.reveal, .reveal-left, .reveal-right, .reveal-scale';
-
+        const SELECTOR = '.reveal, .reveal-left, .reveal-right, .reveal-scale, .reveal-up';
         const io = new IntersectionObserver(
           (entries) => {
             entries.forEach(entry => {
               if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                io.unobserve(entry.target); // stop watching once visible
+                io.unobserve(entry.target);
               }
             });
           },
           { threshold: 0.08, rootMargin: '0px 0px -30px 0px' }
         );
-
-        // Helper: observe all current + future reveal elements
         const observeAll = () => {
           document.querySelectorAll(SELECTOR).forEach(el => {
-            // If already in view (e.g. above fold), make visible immediately
             const rect = el.getBoundingClientRect();
             if (rect.top < window.innerHeight && rect.bottom > 0) {
               el.classList.add('visible');
@@ -427,67 +424,57 @@
             }
           });
         };
-
         observeAll();
-
-        // Watch for new elements added to DOM (filter changes re-render cards)
         const mo = new MutationObserver(() => observeAll());
         mo.observe(document.body, { childList: true, subtree: true });
-
         return () => { io.disconnect(); mo.disconnect(); };
       }, []);
     }
 
     // =============================================
-    // STAT COUNTER HOOK
+    // COUNTER HOOK
     // =============================================
-    function useCountUp(target, duration = 1800) {
+    function useCountUp(target, duration = 1600) {
       const [count, setCount] = useState(0);
       const ref = useRef(null);
-
       useEffect(() => {
-        const observer = new IntersectionObserver(
-          (entries) => {
-            if (entries[0].isIntersecting) {
-              const numTarget = parseInt(target.replace(/\D/g, '')) || 0;
-              const start = Date.now();
-              const tick = () => {
-                const elapsed = Date.now() - start;
-                const progress = Math.min(elapsed / duration, 1);
-                const eased = 1 - Math.pow(1 - progress, 3);
-                setCount(Math.round(eased * numTarget));
-                if (progress < 1) requestAnimationFrame(tick);
-              };
-              requestAnimationFrame(tick);
-              observer.disconnect();
-            }
-          },
-          { threshold: 0.5 }
-        );
+        const observer = new IntersectionObserver((entries) => {
+          if (entries[0].isIntersecting) {
+            const numTarget = parseInt(target.replace(/\D/g, '')) || 0;
+            const start = Date.now();
+            const tick = () => {
+              const elapsed = Date.now() - start;
+              const progress = Math.min(elapsed / duration, 1);
+              const eased = 1 - Math.pow(1 - progress, 3);
+              setCount(Math.round(eased * numTarget));
+              if (progress < 1) requestAnimationFrame(tick);
+            };
+            requestAnimationFrame(tick);
+            observer.disconnect();
+          }
+        }, { threshold: 0.5 });
         if (ref.current) observer.observe(ref.current);
         return () => observer.disconnect();
       }, [target, duration]);
-
       return { count, ref };
     }
 
     // =============================================
     // STAT CARD COMPONENT
     // =============================================
-    function StatCard({ stat }) {
+    function StatCard({ stat, idx }) {
       const { count, ref } = useCountUp(stat.number);
       const suffix = stat.number.replace(/\d/g, '');
-
       return (
-        <div className="stat-card reveal" ref={ref}>
-          <div className="stat-number">{count}{suffix}</div>
-          <div className="stat-label">{stat.label}</div>
+        <div className="stat-bento-item reveal" ref={ref} data-idx={`0${idx+1}`}>
+          <div className="sbi-num">{count}{suffix}</div>
+          <div className="sbi-lbl">{stat.label}</div>
         </div>
       );
     }
 
     // =============================================
-    // MAIN APP
+    // MAIN APP COMPONENT
     // =============================================
     function App() {
       const [activeSection, setActiveSection] = useState('home');
@@ -495,39 +482,31 @@
       const [projectFilter, setProjectFilter] = useState('all');
       const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
       const [isScrolled, setIsScrolled] = useState(false);
-
-      // Form states
       const [formState, setFormState] = useState({ name: '', email: '', subject: '', message: '' });
       const [formError, setFormError] = useState('');
       const [isSubmitting, setIsSubmitting] = useState(false);
       const [submitSuccess, setSubmitSuccess] = useState(false);
 
       const typewriterText = useTypewriter([
-        "Expert Shopify Developer",
-        "Liquid Theme Architect",
-        "Performance Marketing Expert",
-        "Meta & Google Ads Specialist",
-        "E-commerce Growth Strategist",
-        "Shopify Plus Developer",
-        "CRO & ROAS Optimizer"
+        "Shopify Stores",
+        "Liquid Themes",
+        "Custom Features",
+        "App Alternatives",
+        "E-Commerce Stores"
       ]);
 
-      // Scroll reveal
       useScrollReveal();
 
-      // Scroll spy + header scroll state
       useEffect(() => {
         const handleScroll = () => {
           setIsScrolled(window.scrollY > 40);
-          const sections = ['home', 'skills', 'experience', 'projects', 'workflow', 'about-edu', 'contact'];
-          const scrollPosition = window.scrollY + 200;
-          for (const sectionId of sections) {
-            const el = document.getElementById(sectionId);
-            if (el) {
-              if (scrollPosition >= el.offsetTop && scrollPosition < el.offsetTop + el.offsetHeight) {
-                setActiveSection(sectionId);
-                break;
-              }
+          const sections = ['home', 'projects', 'about', 'skills', 'experience', 'services', 'contact'];
+          const scrollPos = window.scrollY + 180;
+          for (const id of sections) {
+            const el = document.getElementById(id);
+            if (el && scrollPos >= el.offsetTop && scrollPos < el.offsetTop + el.offsetHeight) {
+              setActiveSection(id);
+              break;
             }
           }
         };
@@ -535,12 +514,12 @@
         return () => window.removeEventListener('scroll', handleScroll);
       }, []);
 
-      const handleNavClick = (sectionId) => {
+      const handleNavClick = (id) => {
         setIsMobileMenuOpen(false);
-        const el = document.getElementById(sectionId);
+        const el = document.getElementById(id);
         if (el) {
           window.scrollTo({ top: el.offsetTop - 76, behavior: 'smooth' });
-          setActiveSection(sectionId);
+          setActiveSection(id);
         }
       };
 
@@ -561,37 +540,26 @@
           setIsSubmitting(false);
           setSubmitSuccess(true);
           setFormState({ name: '', email: '', subject: '', message: '' });
-        }, 1800);
+        }, 1500);
       };
 
       const filteredSkills = skillFilter === 'all'
-        ? RESUME_DATA.skills
-        : RESUME_DATA.skills.filter(s => s.category === skillFilter);
-
-      // Filter with explicit tag-key mapping
-      const PROJECT_FILTER_MAP = {
-        'custom': 'app replacement',
-        'figma': 'figma to shopify',
-        'performance': 'performance',
-        'headless': 'headless',
-        'cart': 'cart',
-        'ads': 'performance marketing'
-      };
+        ? DATA.skills
+        : DATA.skills.filter(s => s.category === skillFilter);
 
       const filteredProjects = projectFilter === 'all'
-        ? RESUME_DATA.projects
-        : RESUME_DATA.projects.filter(p => {
-            const targetTag = PROJECT_FILTER_MAP[projectFilter] || projectFilter;
-            return p.tag.toLowerCase().includes(targetTag) ||
-                   p.tech.some(t => t.toLowerCase().includes(projectFilter));
-          });
+        ? DATA.projects
+        : projectFilter === 'live'
+        ? DATA.projects.filter(p => p.isLive)
+        : DATA.projects.filter(p => p.category === projectFilter || p.tag.toLowerCase().includes(projectFilter));
 
       const navLinks = [
         { id: 'home', label: 'Home' },
+        { id: 'projects', label: 'Projects' },
+        { id: 'about', label: 'About' },
         { id: 'skills', label: 'Skills' },
         { id: 'experience', label: 'Experience' },
-        { id: 'projects', label: 'Projects' },
-        { id: 'workflow', label: 'Workflow' },
+        { id: 'services', label: 'Services' },
         { id: 'contact', label: 'Contact' },
       ];
 
@@ -601,345 +569,454 @@
           <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
             <div className="container nav-container">
               <a href="#home" onClick={e => { e.preventDefault(); handleNavClick('home'); }} className="logo">
-                <i className="fa-brands fa-shopify"></i>
-                VKS<span className="logo-dot"></span>
+                <div className="logo-icon"><i className="fa-brands fa-shopify"></i></div>
+                <span>VIJAY KARAN SHARMA</span>
+                <span className="logo-dot"></span>
               </a>
 
               <nav className="nav-menu">
                 {navLinks.map(link => (
-                  <a
-                    key={link.id}
-                    href={`#${link.id}`}
+                  <a key={link.id} href={`#${link.id}`}
                     onClick={e => { e.preventDefault(); handleNavClick(link.id); }}
-                    className={`nav-link ${activeSection === link.id ? 'active' : ''}`}
-                  >
+                    className={`nav-link ${activeSection === link.id ? 'active' : ''}`}>
                     {link.label}
                   </a>
                 ))}
               </nav>
 
               <div className="nav-actions">
-                <a
-                  href="#contact"
-                  onClick={e => { e.preventDefault(); handleNavClick('contact'); }}
-                  className="btn-hire nav-menu"
-                >
-                  <i className="fa-solid fa-paper-plane"></i> Hire Me
+                <a href={DATA.profile.resumeUrl} download="Vijay_Karan_Sharma_Shopify_Developer.pdf" className="btn-secondary nav-menu" style={{ padding: '0.5rem 1.15rem', fontSize: '0.82rem' }}>
+                  <i className="fa-solid fa-file-arrow-down"></i> Resume
                 </a>
-                <button
-                  id="mobile-menu-toggle"
-                  onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                  className="mobile-menu-btn"
-                  aria-label="Toggle menu"
-                >
+                <a href="#contact" onClick={e => { e.preventDefault(); handleNavClick('contact'); }} className="btn-hire nav-menu">
+                  <i className="fa-solid fa-paper-plane"></i> Get In Touch
+                </a>
+                <button id="mobile-menu-toggle" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="mobile-menu-btn" aria-label="Toggle menu">
                   <i className={isMobileMenuOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'}></i>
                 </button>
               </div>
             </div>
 
-            {/* Mobile Nav */}
+            {/* Mobile Nav Overlay */}
             <div className={`mobile-nav-overlay ${isMobileMenuOpen ? 'open' : ''}`}>
               {navLinks.map(link => (
-                <a
-                  key={link.id}
-                  href={`#${link.id}`}
+                <a key={link.id} href={`#${link.id}`}
                   onClick={e => { e.preventDefault(); handleNavClick(link.id); }}
-                  className={`mobile-nav-link ${activeSection === link.id ? 'active' : ''}`}
-                >
+                  className={`mobile-nav-link ${activeSection === link.id ? 'active' : ''}`}>
                   {link.label}
                 </a>
               ))}
-              <a href="#contact" onClick={e => { e.preventDefault(); handleNavClick('contact'); }} className="btn-hire" style={{ marginTop: '12px', textAlign: 'center' }}>
-                <i className="fa-solid fa-paper-plane"></i> Hire Me
+              <a href={DATA.profile.resumeUrl} download="Vijay_Karan_Sharma_Shopify_Developer.pdf" className="btn-secondary" style={{ marginTop: '0.5rem', width: '220px' }}>
+                <i className="fa-solid fa-file-arrow-down"></i> Download Resume
+              </a>
+              <a href="#contact" onClick={e => { e.preventDefault(); handleNavClick('contact'); }} className="btn-primary" style={{ marginTop: '0.5rem', width: '220px' }}>
+                <i className="fa-solid fa-paper-plane"></i> Get In Touch
               </a>
             </div>
           </header>
 
-          {/* ==================== HERO ==================== */}
+          {/* ==================== HERO SECTION ==================== */}
           <section id="home" className="hero">
-            <div className="hero-mesh"></div>
+            <div className="container hero-inner">
 
-            <div className="container hero-grid">
+              {/* LEFT */}
+              <div className="hero-left reveal">
+                <div className="hero-avail">
+                  <span className="hero-avail-dot"></span>
+                  Open for Full-Time Roles & Remote Projects
+                </div>
 
-              {/* LEFT: Text */}
-              <div>
-                <span className="hero-tagline reveal">
-                  <i className="fa-brands fa-shopify"></i> Shopify Developer &amp; Performance Marketing Expert
-                </span>
+                <div className="hero-eyebrow">Professional Shopify Developer & Custom Feature Specialist</div>
 
-                <h1 className="hero-title reveal" style={{ transitionDelay: '0.1s' }}>
-                  Hi, I'm <span className="name-highlight">{RESUME_DATA.profile.name}</span>
+                <h1 className="hero-h1">
+                  Any Functionality.<br />
+                  <span className="hero-typewriter-text">{typewriterText}</span>
+                  <em>Built & Customized Cleanly.</em>
                 </h1>
 
-                <div className="hero-role reveal" style={{ transitionDelay: '0.2s' }}>
-                  <span className="role-badge">
-                    <i className="fa-solid fa-circle" style={{ fontSize: '0.5rem', color: '#22c55e', marginRight: '5px' }}></i>
-                    Available
-                  </span>
-                  <span>{typewriterText}<span className="typewriter-cursor"></span></span>
-                </div>
-
-                <p className="hero-desc reveal" style={{ transitionDelay: '0.3s' }}>
-                  {RESUME_DATA.profile.summary}
+                <p className="hero-sub">
+                  Hi, I'm <strong>Vijay Karan Sharma</strong> — a professional Shopify Developer with <strong>3+ years of experience across 50+ Shopify stores</strong>, currently serving as <strong>Head of Web Technology at Éclat Maison</strong> (managing store technical infrastructure, WhatsApp automations, and order workflows). I am <strong>actively seeking long-term opportunities where I can contribute and grow for years to come</strong>, as well as high-impact client projects. Whatever feature you need — custom Liquid templating, app replacements, complex cart rules, or speed overhauls — I build and ship it cleanly.
                 </p>
 
-                <div className="hero-ctas reveal" style={{ transitionDelay: '0.4s' }}>
-                  <button id="hero-view-portfolio" onClick={() => handleNavClick('projects')} className="btn-primary">
-                    View Portfolio <i className="fa-solid fa-arrow-right"></i>
+                <div className="hero-btns">
+                  <button onClick={() => handleNavClick('projects')} className="btn-primary">
+                    <i className="fa-solid fa-arrow-down"></i> Explore Work
                   </button>
-                  <a href="./resume/vijay-karan-sharma-shopify-developer-09June2026.pdf" download className="btn-secondary">
-                    Download CV <i className="fa-solid fa-download"></i>
+                  <a href={DATA.profile.resumeUrl} download="Vijay_Karan_Sharma_Shopify_Developer.pdf" className="btn-secondary">
+                    <i className="fa-solid fa-file-arrow-down"></i> Download Resume (PDF)
                   </a>
+                  <button onClick={() => handleNavClick('contact')} className="btn-secondary">
+                    <i className="fa-solid fa-envelope"></i> Let's Talk
+                  </button>
                 </div>
 
-                <div className="hero-socials reveal" style={{ transitionDelay: '0.5s' }}>
-                  <span>Connect:</span>
-                  <a href={`mailto:${RESUME_DATA.profile.email}`} className="social-circle" title="Email Me" id="hero-email-btn">
-                    <i className="fa-solid fa-envelope"></i>
-                  </a>
-                  <a href={`tel:${RESUME_DATA.profile.phone}`} className="social-circle" title="Call / WhatsApp" id="hero-phone-btn">
-                    <i className="fa-brands fa-whatsapp"></i>
-                  </a>
-                  <a href="#contact" onClick={e => { e.preventDefault(); handleNavClick('contact'); }} className="social-circle" title="Contact Form" id="hero-contact-btn">
-                    <i className="fa-solid fa-comment-dots"></i>
-                  </a>
+                <div className="hero-stack">
+                  <span className="hero-stack-label">Specialties:</span>
+                  {['Liquid Themes', 'Custom Features', 'App Alternatives', 'Ajax Cart', 'Metafields', 'Speed (90+)', 'Figma to Shopify', 'React'].map(t => (
+                    <span key={t} className="hero-stack-pill">{t}</span>
+                  ))}
                 </div>
               </div>
 
-              {/* RIGHT: Avatar with badges */}
-              <div className="avatar-container reveal-right" style={{ transitionDelay: '0.2s' }}>
-
-                {/* Blob glow */}
-                <div className="avatar-blob-bg"></div>
-
-                {/* Orbit dots */}
-                <div className="orbit-dot orbit-dot-1"></div>
-                <div className="orbit-dot orbit-dot-2"></div>
-                <div className="orbit-dot orbit-dot-3"></div>
-                <div className="orbit-dot orbit-dot-4"></div>
-
-                {/* Ghost trail rings */}
-                <div className="orbit-trail orbit-trail-1"></div>
-                <div className="orbit-trail orbit-trail-2"></div>
-
-                {/* Shopify Expert badge — top-right corner of frame */}
-                <div className="floating-badge badge-shopify">
-                  <div className="fbadge-icon fbadge-green">
-                    <i className="fa-brands fa-shopify"></i>
+              {/* RIGHT — AVATAR & SHOWCASE */}
+              <div className="hero-photo-wrap reveal-right">
+                <div className="hero-photo-card">
+                  <div className="hero-photo-frame">
+                    <img src="assets/developer_avatarnew.jpeg" alt="Vijay Karan Sharma – Shopify Developer" />
                   </div>
-                  <div className="fbadge-body">
-                    <div className="fbadge-label">Shopify Expert</div>
-                    <div className="fbadge-value">50+ Projects</div>
-                    <div className="fbadge-stars">
-                      <i className="fa-solid fa-star"></i>
-                      <i className="fa-solid fa-star"></i>
-                      <i className="fa-solid fa-star"></i>
-                      <i className="fa-solid fa-star"></i>
-                      <i className="fa-solid fa-star"></i>
-                      <span>5.0</span>
+
+                  {/* Floating Expertise Badge */}
+                  <div className="hero-stat-badge-top">
+                    <div className="hsbt-icon"><i className="fa-brands fa-shopify"></i></div>
+                    <div>
+                      <div className="hsbt-num">50+</div>
+                      <div className="hsbt-lbl">Stores Worked On</div>
+                    </div>
+                  </div>
+
+                  {/* Floating Live Badge */}
+                  <div className="hero-stat-badge-bottom">
+                    <div className="hsbb-dot"></div>
+                    <div>
+                      <div className="hsbb-text">Open for Full-Time Roles & Projects</div>
+                      <div className="hsbb-sub">Any Custom Feature · Liquid Expert</div>
                     </div>
                   </div>
                 </div>
-
-                {/* Avatar photo */}
-                <div className="avatar-frame">
-                  <img src="assets/developer_avatarnew.jpeg" alt="Vijay Karan Sharma – Expert Shopify Developer" className="avatar-image" />
-                </div>
-
-                {/* Performance badge — bottom-left corner of frame */}
-                <div className="floating-badge badge-code">
-                  <div className="fbadge-icon fbadge-purple">
-                    <i className="fa-solid fa-bullseye"></i>
-                  </div>
-                  <div className="fbadge-body">
-                    <div className="fbadge-label">Performance Marketing</div>
-                    <div className="fbadge-value">Avg. 4.2x ROAS</div>
-                    <div className="fbadge-metric">
-                      <span className="fbadge-up"><i className="fa-solid fa-arrow-trend-up"></i> Meta · Google Ads</span>
-                    </div>
-                  </div>
-                </div>
-
               </div>
 
             </div>
-
-            {/* Marquee skills ticker */}
-            <div className="hero-marquee-wrap">
-              <div className="hero-marquee-track">
-                {['Shopify Liquid', 'Meta Ads', 'Google Ads', 'CRO & ROAS', 'Shopify Plus', 'Performance Max', 'Headless Shopify', 'YouTube Ads', 'Figma to Shopify', 'Core Web Vitals', 'Klaviyo', 'Advantage+',
-                  'Shopify Liquid', 'Meta Ads', 'Google Ads', 'CRO & ROAS', 'Shopify Plus', 'Performance Max', 'Headless Shopify', 'YouTube Ads', 'Figma to Shopify', 'Core Web Vitals', 'Klaviyo', 'Advantage+'].map((item, i) => (
-                  <span key={i} className="marquee-item" aria-hidden={i >= 12}>
-                    <i className="fa-solid fa-diamond marquee-dot"></i> {item}
-                  </span>
-                ))}
-              </div>
-            </div>
-
           </section>
 
+          {/* ==================== CLIENT MARQUEE RIBBON ==================== */}
+          <div className="brand-marquee-section">
+            <div className="brand-marquee-track">
+              {[...DATA.recentClients, ...DATA.recentClients, ...DATA.recentClients].map((client, idx) => (
+                <span key={idx} className="brand-marquee-item">
+                  <i className="fa-solid fa-arrow-trend-up" style={{ fontSize: '0.75rem', opacity: 0.8 }}></i>
+                  {client}
+                  <span className="brand-marquee-sep">✦</span>
+                </span>
+              ))}
+            </div>
+          </div>
 
-          {/* ==================== STATS ==================== */}
+          {/* ==================== STATS BENTO ==================== */}
           <section className="stats">
-            <div className="container">
-              <div className="stats-inner stagger-children">
-                {RESUME_DATA.profile.stats.map((stat, idx) => (
-                  <StatCard key={idx} stat={stat} />
-                ))}
-              </div>
+            <div className="stats-bento stagger-children">
+              {DATA.profile.stats.map((stat, idx) => (
+                <StatCard key={idx} stat={stat} idx={idx} />
+              ))}
             </div>
           </section>
 
-          {/* ==================== SKILLS ==================== */}
-          <section id="skills">
+          {/* ==================== PROJECTS SECTION ==================== */}
+          <section id="projects" className="projects-section">
             <div className="container">
               <div className="section-header reveal">
-                <span className="section-tag green-tag"><i className="fa-solid fa-bolt"></i> Expertise</span>
-                <div className="section-divider"></div>
-                <h2 className="section-title">Shopify Dev <span>&amp; Performance Marketing</span></h2>
-                <p className="section-desc">Dual expertise in Shopify's entire ecosystem — Liquid theme development, Headless Hydrogen, Shopify Plus — combined with data-driven performance marketing via Meta Ads, Google Ads, CRO &amp; ROAS optimization.</p>
+                <span className="section-tag"><i className="fa-solid fa-layer-group"></i> Proven Work & Client Stores</span>
+                <h2 className="section-title">Client Stores & <span className="marker">Case Studies</span></h2>
+                <p className="section-desc">
+                  Explore selected live production storefronts, custom app replacement engines, advanced cart architectures, and performance turnarounds.
+                </p>
               </div>
 
-              <div className="skills-tabs reveal">
+              {/* Filter Tabs */}
+              <div className="proj-filter-bar reveal">
                 {[
-                  { key: 'all', label: 'All Skills' },
-                  { key: 'core', label: 'Core Dev' },
-                  { key: 'shopify', label: 'Shopify Platform' },
-                  { key: 'performance', label: 'Performance & SEO' },
-                  { key: 'marketing', label: '🚀 Performance Marketing' },
-                  { key: 'tools', label: 'Tools & Deployment' }
-                ].map(tab => (
-                  <button
-                    key={tab.key}
-                    id={`skill-tab-${tab.key}`}
-                    onClick={() => setSkillFilter(tab.key)}
-                    className={`tab-btn ${skillFilter === tab.key ? 'active' : ''}`}
-                  >
-                    {tab.label}
-                  </button>
-                ))}
-              </div>
-
-              <div key={skillFilter} className="skills-grid tab-animate-grid">
-                {filteredSkills.map((skill, idx) => (
-                  <div key={idx} className="skill-card tab-card-enter" style={{ animationDelay: `${idx * 0.06}s` }}>
-                    <div className="skill-icon">
-                      <i className={skill.icon}></i>
-                    </div>
-                    <div className="skill-info">
-                      <h3 className="skill-name">{skill.name}</h3>
-                      <p className="skill-desc">{skill.desc}</p>
-                      <div className="skill-bar-wrap">
-                        <div className="skill-bar">
-                          <div className="skill-bar-fill" style={{ width: `${skill.level}%` }}></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* ==================== EXPERIENCE ==================== */}
-          <section id="experience" style={{ background: 'var(--bg-primary)', borderTop: '1px solid var(--border-color)' }}>
-            <div className="container">
-              <div className="section-header reveal">
-                <span className="section-tag"><i className="fa-solid fa-briefcase"></i> Career Timeline</span>
-                <div className="section-divider"></div>
-                <h2 className="section-title">Work <span>Experience</span></h2>
-                <p className="section-desc">3+ years of progressive Shopify development — from internships to leading full-stack theme builds at agencies and remote positions.</p>
-              </div>
-
-              <div className="timeline">
-                {RESUME_DATA.experiences.map((exp, idx) => (
-                  <div key={idx} className="timeline-item reveal" style={{ transitionDelay: `${idx * 0.08}s` }}>
-                    <div className="timeline-badge"></div>
-                    <div className="timeline-card">
-                      <div className="timeline-meta">
-                        <div>
-                          <h3 className="timeline-title">{exp.role}</h3>
-                          <div className="timeline-company">
-                            <i className="fa-solid fa-building"></i>
-                            {exp.company} <span>{exp.type}</span>
-                          </div>
-                        </div>
-                        <div className="timeline-date">
-                          <i className="fa-regular fa-calendar"></i> {exp.duration}
-                        </div>
-                      </div>
-                      <div className="timeline-content">
-                        <ul>
-                          {exp.bullets.map((bullet, bIdx) => (
-                            <li key={bIdx}>{bullet}</li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* ==================== PROJECTS ==================== */}
-          <section id="projects">
-            <div className="container">
-              <div className="section-header reveal">
-                <span className="section-tag green-tag"><i className="fa-solid fa-folder-open"></i> Portfolio</span>
-                <div className="section-divider"></div>
-                <h2 className="section-title">Projects & <span>Case Studies</span></h2>
-                <p className="section-desc">Real-world Shopify solutions — custom features, app replacements, performance wins, and full theme builds that drive results.</p>
-              </div>
-
-              <div className="skills-tabs reveal">
-                {[
-                  { key: 'all', label: 'All Projects' },
-                  { key: 'custom', label: 'App Replacements' },
-                  { key: 'figma', label: 'Figma to Shopify' },
-                  { key: 'performance', label: 'Optimization' },
-                  { key: 'ads', label: '🚀 Ads & Marketing' },
-                  { key: 'headless', label: 'Headless' }
+                  { key: 'all', label: 'All Projects', count: DATA.projects.length },
+                  { key: 'live', label: 'Live Client Stores', count: 7 },
+                  { key: 'engineering', label: 'Custom Features & App Alternatives', count: 4 },
+                  { key: 'performance', label: 'Speed & Optimization', count: 1 }
                 ].map(tab => (
                   <button
                     key={tab.key}
                     id={`project-tab-${tab.key}`}
                     onClick={() => setProjectFilter(tab.key)}
-                    className={`tab-btn ${projectFilter === tab.key ? 'active' : ''}`}
+                    className={`pf-btn ${projectFilter === tab.key ? 'active' : ''}`}
                   >
                     {tab.label}
                   </button>
                 ))}
               </div>
 
-              <div key={projectFilter} className="projects-grid tab-animate-grid">
+              {/* Projects Grid */}
+              <div className="projects-grid stagger-children">
                 {filteredProjects.map((project, idx) => (
-                  <div key={idx} className="project-card tab-card-enter" style={{ animationDelay: `${idx * 0.07}s` }}>
-                    <div className="project-header">
-                      <div className="project-icon-wrap">
+                  <div key={`${project.title}-${idx}`} className="proj-card reveal">
+                    <div className="proj-card-top">
+                      <div className="proj-icon-box">
                         <i className={project.icon}></i>
                       </div>
-                      <span className="project-badge">{project.tag}</span>
+                      <div className="proj-badges">
+                        {project.isLive && (
+                          <span className="proj-live-badge">
+                            <span className="proj-live-dot"></span>
+                            Live Store
+                          </span>
+                        )}
+                        <span className="proj-tag-pill">{project.tag}</span>
+                      </div>
                     </div>
-                    <div className="project-body">
-                      <h3 className="project-title">{project.title}</h3>
-                      <p className="project-desc">{project.desc}</p>
 
-                      {/* Result metric badge */}
-                      {project.result && (
-                        <div className="project-result">
-                          <i className="fa-solid fa-chart-line"></i>
-                          <span>{project.result}</span>
+                    <div>
+                      {project.domain && (
+                        <div className="proj-domain">
+                          <i className="fa-solid fa-link" style={{ fontSize: '0.65rem', marginRight: '4px' }}></i>
+                          {project.domain}
                         </div>
                       )}
+                      <h3 className="proj-title" style={{ marginTop: '0.35rem' }}>{project.title}</h3>
+                    </div>
 
+                    <p className="proj-desc">{project.desc}</p>
 
-
-                      <div className="project-links">
-                        <a href="#contact" onClick={e => { e.preventDefault(); handleNavClick('contact'); }} className="project-link">
-                          Discuss This Project <i className="fa-solid fa-arrow-right"></i>
-                        </a>
+                    {project.result && (
+                      <div className="proj-result">
+                        <i className="fa-solid fa-circle-check"></i>
+                        <span>{project.result}</span>
                       </div>
+                    )}
+
+                    <div className="proj-tech-row">
+                      {project.tech.map((t, tIdx) => (
+                        <span key={tIdx} className="proj-tech-tag">{t}</span>
+                      ))}
+                    </div>
+
+                    <div className="proj-footer">
+                      {project.url ? (
+                        <a
+                          href={project.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="proj-visit-btn"
+                          title={`Visit ${project.title}`}
+                        >
+                          Visit Live Store <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                      ) : (
+                        <a
+                          href="#contact"
+                          onClick={e => { e.preventDefault(); handleNavClick('contact'); }}
+                          className="proj-cta"
+                        >
+                          View Architecture <i className="fa-solid fa-arrow-right"></i>
+                        </a>
+                      )}
+
+                      <a
+                        href="#contact"
+                        onClick={e => { e.preventDefault(); handleNavClick('contact'); }}
+                        className="proj-cta"
+                        style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}
+                      >
+                        Discuss <i className="fa-solid fa-arrow-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+            </div>
+          </section>
+
+          {/* ==================== ABOUT SECTION ==================== */}
+          <section id="about" className="about-section">
+            <div className="container">
+              <div className="about-bento">
+
+                {/* Left Card */}
+                <div className="about-intro-card reveal-left">
+                  <div className="about-intro-tag">
+                    <span className="tag-pill"><i className="fa-solid fa-user"></i> About Me</span>
+                  </div>
+
+                  <h2 className="about-intro-h">
+                    Professional Shopify Development for Any Requirement
+                  </h2>
+
+                  <p className="about-intro-p">
+                    My core expertise is full-cycle Shopify development — whether building bespoke Liquid storefronts from scratch, converting Figma files into responsive themes, or engineering custom features that replace costly apps.
+                  </p>
+
+                  <p className="about-intro-p">
+                    Over the last <strong>3+ years</strong>, I have worked across <strong>50+ Shopify stores</strong>, tackling diverse e-commerce requirements. Currently, I serve as <strong>Head of Web Technology at Éclat Maison</strong> (eclatmaison.in), managing technical systems, automated WhatsApp workflows, order management processes, and ongoing storefront development — while actively taking on new long-term full-time roles and high-impact client projects.
+                  </p>
+
+                  <p className="about-intro-p">
+                    If you have any custom feature requirement — dynamic product builders, tiered shipping bars, drawer carts, or custom metafield architectures — <strong>I make it work reliably without store bloat.</strong>
+                  </p>
+
+                  <div className="about-checks">
+                    {[
+                      "Any custom functionality or feature built with lean Liquid & JavaScript.",
+                      "App replacements to eliminate high recurring monthly subscription costs.",
+                      "Managing full e-commerce operations, WhatsApp automations & order workflows.",
+                      "Seeking long-term opportunities where I can work, grow, and add value for years and years."
+                    ].map((text, i) => (
+                      <div key={i} className="about-check">
+                        <div className="about-check-icon"><i className="fa-solid fa-check"></i></div>
+                        <span>{text}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Right Stacked Cards */}
+                <div className="about-right reveal-right">
+                  {/* Education */}
+                  <div className="about-edu-card">
+                    <div className="acc-label"><i className="fa-solid fa-graduation-cap"></i> Education</div>
+                    <div className="acc-degree">{DATA.education.degree}</div>
+                    <div className="acc-school">{DATA.education.school}</div>
+                    <div className="acc-date">{DATA.education.duration} · {DATA.education.grade}</div>
+                  </div>
+
+                  {/* Location & Remote */}
+                  <div className="about-location-row">
+                    <div className="about-mini-card">
+                      <div className="amc-icon"><i className="fa-solid fa-location-dot"></i></div>
+                      <div className="amc-title">Location</div>
+                      <div className="amc-body">Himachal Pradesh, India</div>
+                    </div>
+
+                    <div className="about-mini-card">
+                      <div className="amc-icon"><i className="fa-solid fa-globe"></i></div>
+                      <div className="amc-title">Availability</div>
+                      <div className="amc-body"><strong>100% Remote</strong> Worldwide · Freelance & Full-Time</div>
+                    </div>
+                  </div>
+
+                  {/* Languages */}
+                  <div className="about-lang-card">
+                    {[{ name: 'English', score: 5 }, { name: 'Hindi', score: 5 }].map((lang, i) => (
+                      <div key={i} className="lang-item">
+                        <div className="lang-name2">{lang.name}</div>
+                        <div className="lang-bar">
+                          {[...Array(5)].map((_, j) => (
+                            <div key={j} className={`lang-dot2 ${j < lang.score ? 'on' : ''}`}></div>
+                          ))}
+                        </div>
+                        <div className="lang-level2">Fluent / Professional</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </section>
+
+          {/* ==================== SKILLS SECTION ==================== */}
+          <section id="skills" className="skills-section">
+            <div className="container">
+              <div className="section-header reveal">
+                <span className="section-tag"><i className="fa-solid fa-screwdriver-wrench"></i> Technical Capabilities</span>
+                <h2 className="section-title">Skills & <span className="marker">Core Expertise</span></h2>
+                <p className="section-desc">From custom Shopify Liquid theme development to React frontend systems and Core Web Vitals optimization.</p>
+              </div>
+
+              <div className="skills-wrap">
+                {/* Left Category Nav */}
+                <div className="skills-nav-col reveal-left">
+                  <div className="skills-cat-btns">
+                    {[
+                      { key: 'all', label: 'All Capabilities', icon: 'fa-solid fa-grid-2', count: DATA.skills.length },
+                      { key: 'shopify', label: 'Shopify Core', icon: 'fa-brands fa-shopify', count: DATA.skills.filter(s => s.category === 'shopify').length },
+                      { key: 'frontend', label: 'Frontend & React', icon: 'fa-brands fa-react', count: DATA.skills.filter(s => s.category === 'frontend').length },
+                      { key: 'optimization', label: 'Speed & Conversion', icon: 'fa-solid fa-gauge-high', count: DATA.skills.filter(s => s.category === 'optimization').length },
+                      { key: 'tools', label: 'Workflow & Tools', icon: 'fa-brands fa-github', count: DATA.skills.filter(s => s.category === 'tools').length },
+                    ].map(cat => (
+                      <button
+                        key={cat.key}
+                        onClick={() => setSkillFilter(cat.key)}
+                        className={`skills-cat-btn ${skillFilter === cat.key ? 'active' : ''}`}
+                      >
+                        <i className={cat.icon}></i>
+                        <span>{cat.label}</span>
+                        <span className="skills-count-badge">{cat.count}</span>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Right Skills Grid */}
+                <div className="skills-grid-new stagger-children">
+                  {filteredSkills.map((skill, idx) => (
+                    <div key={idx} className="skill-card-new reveal">
+                      <div className="scn-top">
+                        <div className="scn-icon"><i className={skill.icon}></i></div>
+                        <div className="scn-level">{skill.level}% Proficiency</div>
+                      </div>
+                      <div className="scn-name">{skill.name}</div>
+                      <div className="scn-desc">{skill.desc}</div>
+                      <div className="scn-bar">
+                        <div className="scn-bar-fill" style={{ width: `${skill.level}%` }}></div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+          {/* ==================== WORK EXPERIENCE ==================== */}
+          <section id="experience" className="experience-section">
+            <div className="container">
+              <div className="section-header reveal">
+                <span className="section-tag"><i className="fa-solid fa-briefcase"></i> Track Record</span>
+                <h2 className="section-title">Work <span className="marker">Experience</span></h2>
+                <p className="section-desc">Over 3 years of progressive e-commerce engineering across consulting agencies and direct client storefronts.</p>
+              </div>
+
+              <div className="exp-list stagger-children">
+                {DATA.experiences.map((exp, idx) => (
+                  <div key={idx} className="exp-card reveal">
+                    <div className="exp-header">
+                      <div className="exp-index">0{idx + 1}</div>
+                      <div className="exp-meta">
+                        <div className="exp-role">{exp.role}</div>
+                        <div className="exp-company-row">
+                          <i className="fa-solid fa-building"></i>
+                          <strong>{exp.company}</strong>
+                          <span className="exp-type-tag">{exp.type}</span>
+                        </div>
+                      </div>
+                      <div className="exp-date-tag">
+                        <i className="fa-regular fa-calendar" style={{ marginRight: '6px' }}></i> {exp.duration}
+                      </div>
+                    </div>
+                    <div className="exp-bullets">
+                      <ul>
+                        {exp.bullets.map((bullet, bIdx) => (
+                          <li key={bIdx}>{bullet}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* ==================== SERVICES ==================== */}
+          <section id="services" className="services-section">
+            <div className="container">
+              <div className="section-header reveal">
+                <span className="section-tag"><i className="fa-solid fa-handshake"></i> Offerings</span>
+                <h2 className="section-title">Services & <span className="marker">What I Deliver</span></h2>
+                <p className="section-desc">Comprehensive Shopify development, performance audits, custom app replacements, and modern web applications.</p>
+              </div>
+
+              <div className="services-inner stagger-children">
+                {DATA.services.map((service, idx) => (
+                  <div key={idx} className="service-item reveal">
+                    <div className="srv-icon-wrap"><i className={service.icon}></i></div>
+                    <div className="srv-body">
+                      <div className="srv-title">{service.title}</div>
+                      <div className="srv-desc">{service.desc}</div>
                     </div>
                   </div>
                 ))}
@@ -948,27 +1025,25 @@
           </section>
 
           {/* ==================== WORKFLOW ==================== */}
-          <section id="workflow" style={{ borderTop: '1px solid var(--border-color)' }}>
+          <section className="workflow-section">
             <div className="container">
               <div className="section-header reveal">
-                <span className="section-tag"><i className="fa-solid fa-diagram-project"></i> My Process</span>
-                <div className="section-divider"></div>
-                <h2 className="section-title">How I <span>Work</span></h2>
-                <p className="section-desc">A structured, professional development workflow — from discovery and design to launch and post-launch support — ensuring quality at every step.</p>
+                <span className="section-tag"><i className="fa-solid fa-diagram-project"></i> Methodology</span>
+                <h2 className="section-title">How I <span className="marker">Work</span></h2>
+                <p className="section-desc">A structured, dependable 6-step engineering process designed to eliminate risks and deliver results.</p>
               </div>
 
               <div className="workflow-grid stagger-children">
-                {RESUME_DATA.workflows.map((step, idx) => (
-                  <div key={idx} className="workflow-card reveal" style={{ transitionDelay: `${idx * 0.09}s` }}>
-                    <div className="workflow-step-num">{step.step}</div>
-                    <div className="workflow-icon">
-                      <i className={step.icon}></i>
-                    </div>
-                    <h3 className="workflow-title">{step.title}</h3>
-                    <p className="workflow-desc">{step.desc}</p>
-                    <div className="workflow-tools">
+                {DATA.workflows.map((step, idx) => (
+                  <div key={idx} className="wf-card reveal">
+                    <div className="wf-num-bg">{step.step}</div>
+                    <div className="wf-step">STEP {step.step}</div>
+                    <div className="wf-icon"><i className={step.icon}></i></div>
+                    <div className="wf-title">{step.title}</div>
+                    <div className="wf-desc">{step.desc}</div>
+                    <div className="wf-tools">
                       {step.tools.map((tool, tIdx) => (
-                        <span key={tIdx} className="workflow-tool">{tool}</span>
+                        <span key={tIdx} className="wf-tool">{tool}</span>
                       ))}
                     </div>
                   </div>
@@ -977,149 +1052,120 @@
             </div>
           </section>
 
-          {/* ==================== EDUCATION ==================== */}
-          <section id="about-edu">
+          {/* ==================== TECH STACK PILLS ==================== */}
+          <section className="tech-section">
             <div className="container">
-              <div className="section-header reveal">
-                <span className="section-tag green-tag"><i className="fa-solid fa-graduation-cap"></i> Background</span>
-                <div className="section-divider"></div>
-                <h2 className="section-title">Education & <span>Profile</span></h2>
+              <div className="section-header reveal" style={{ marginBottom: '2.5rem' }}>
+                <span className="section-tag"><i className="fa-solid fa-microchip"></i> Tech Stack</span>
+                <h2 className="section-title" style={{ fontSize: '2rem' }}>Technologies & Tools</h2>
               </div>
-
-              <div className="misc-grid">
-                {/* Education */}
-                <div className="misc-card reveal-left">
-                  <h2 className="misc-title">
-                    <i className="fa-solid fa-graduation-cap"></i> Education
-                  </h2>
-                  <div className="edu-item">
-                    <div className="edu-header">
-                      <h3 className="edu-degree">{RESUME_DATA.education.degree}</h3>
-                      <span className="edu-date">
-                        <i className="fa-regular fa-calendar" style={{ marginRight: '5px' }}></i>
-                        {RESUME_DATA.education.duration}
-                      </span>
-                    </div>
-                    <div className="edu-school">
-                      <i className="fa-solid fa-building-columns" style={{ marginRight: '6px' }}></i>
-                      {RESUME_DATA.education.school}
-                    </div>
-                    <div className="edu-desc">Academic focus and professional skills developed:</div>
-                    <ul className="edu-bullets">
-                      {RESUME_DATA.education.bullets.map((bullet, idx) => (
-                        <li key={idx}>{bullet}</li>
-                      ))}
-                    </ul>
+              <div className="tech-wrap reveal">
+                {DATA.techStack.map((tech, idx) => (
+                  <div key={idx} className="tech-item">
+                    <i className={tech.icon}></i>
+                    <span>{tech.name}</span>
                   </div>
-                </div>
-
-                {/* Languages */}
-                <div className="misc-card reveal-right">
-                  <h2 className="misc-title">
-                    <i className="fa-solid fa-language"></i> Languages
-                  </h2>
-                  {RESUME_DATA.languages.map((lang, idx) => (
-                    <div key={idx} className="language-item">
-                      <div className="lang-header">
-                        <span className="lang-name">{lang.name}</span>
-                        <span className="lang-level">{lang.level}</span>
-                      </div>
-                      <div className="dots-container">
-                        {[...Array(5)].map((_, i) => (
-                          <div key={i} className={`dot ${i < lang.score ? 'active' : ''}`}></div>
-                        ))}
-                      </div>
-                    </div>
-                  ))}
-
-                  <div className="location-card">
-                    <h4><i className="fa-solid fa-location-crosshairs"></i> Location & Availability</h4>
-                    <p>Based in Joginder Nagar, Himachal Pradesh, India. Open to <strong>remote roles worldwide</strong> and freelance consultations.</p>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
           </section>
 
           {/* ==================== CONTACT ==================== */}
-          <section id="contact" style={{ borderTop: '1px solid var(--border-color)' }}>
+          <section id="contact" className="contact-section">
             <div className="container">
-              {/* Hero Banner */}
-              <div className="contact-hero-banner reveal">
-                <h2><i className="fa-solid fa-handshake" style={{ marginRight: '12px' }}></i>Let's Build &amp; Scale Together</h2>
-                <p>Need a high-converting Shopify store, pixel-perfect theme build, or expert Meta &amp; Google Ads management? Let's turn your brand into a revenue machine.</p>
-              </div>
+              <div className="contact-split">
 
-              <div className="contact-grid">
-                {/* Info Cards */}
-                <div className="contact-info">
-                  <div className="info-card reveal" style={{ transitionDelay: '0.1s' }}>
-                    <div className="info-icon"><i className="fa-solid fa-envelope"></i></div>
-                    <div className="info-details">
-                      <div>Email Address</div>
-                      <a href={`mailto:${RESUME_DATA.profile.email}`}>{RESUME_DATA.profile.email}</a>
+                {/* Left Info */}
+                <div className="contact-left reveal-left">
+                  <div>
+                    <span className="tag-pill" style={{ marginBottom: '1.25rem', display: 'inline-flex' }}>
+                      <i className="fa-solid fa-paper-plane"></i> Let's Talk
+                    </span>
+                    <h2 className="contact-big-text">
+                      Let's Build Your Next<br />
+                      <span>Shopify Project.</span>
+                    </h2>
+                    <p className="contact-sub" style={{ marginTop: '1rem' }}>
+                      Whether you need a complete custom store build, a speed overhaul, a Figma-to-Shopify theme, or an app replacement engine, I'm ready to help.
+                    </p>
+                  </div>
+
+                  <div className="contact-info-list">
+                    <div className="contact-info-item">
+                      <div className="cii-icon"><i className="fa-solid fa-envelope"></i></div>
+                      <div>
+                        <div className="cii-label">Email Directly</div>
+                        <div className="cii-value">
+                          <a href={`mailto:${DATA.profile.email}`}>{DATA.profile.email}</a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="contact-info-item">
+                      <div className="cii-icon"><i className="fa-brands fa-whatsapp"></i></div>
+                      <div>
+                        <div className="cii-label">WhatsApp / Phone</div>
+                        <div className="cii-value">
+                          <a href={`https://wa.me/919459009099`} target="_blank" rel="noopener noreferrer">{DATA.profile.phone}</a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="contact-info-item">
+                      <div className="cii-icon"><i className="fa-solid fa-location-dot"></i></div>
+                      <div>
+                        <div className="cii-label">Location</div>
+                        <div className="cii-value">{DATA.profile.location}</div>
+                      </div>
+                    </div>
+
+                    <div className="contact-info-item">
+                      <div className="cii-icon"><i className="fa-brands fa-linkedin"></i></div>
+                      <div>
+                        <div className="cii-label">LinkedIn</div>
+                        <div className="cii-value">
+                          <a href={DATA.profile.linkedin} target="_blank" rel="noopener noreferrer">linkedin.com/in/vijaykaransharma</a>
+                        </div>
+                      </div>
                     </div>
                   </div>
 
-                  <div className="info-card reveal" style={{ transitionDelay: '0.18s' }}>
-                    <div className="info-icon"><i className="fa-brands fa-whatsapp"></i></div>
-                    <div className="info-details">
-                      <div>Call / WhatsApp</div>
-                      <a href={`tel:${RESUME_DATA.profile.phone}`}>{RESUME_DATA.profile.phone}</a>
-                    </div>
-                  </div>
-
-                  <div className="info-card reveal" style={{ transitionDelay: '0.26s' }}>
-                    <div className="info-icon"><i className="fa-solid fa-location-dot"></i></div>
-                    <div className="info-details">
-                      <div>Location</div>
-                      <p>{RESUME_DATA.profile.location}</p>
-                    </div>
-                  </div>
-
-                  <div className="info-card reveal" style={{ transitionDelay: '0.34s' }}>
-                    <div className="info-icon"><i className="fa-brands fa-shopify" style={{ color: 'var(--shopify-green)' }}></i></div>
-                    <div className="info-details">
-                      <div>Specialization</div>
-                      <p>Shopify Theme Dev & Liquid</p>
-                    </div>
-                  </div>
-
-                  <div className="availability-card reveal" style={{ transitionDelay: '0.42s' }}>
-                    <h4><span className="avail-dot"></span>Currently Available</h4>
-                    <p>Open to new Shopify projects, freelance contracts, and full-time remote positions worldwide.</p>
+                  <div className="avail-banner">
+                    <h4><span className="avail-dot"></span> Currently Available for Hire</h4>
+                    <p>Open for full-time remote roles and long-term opportunities where I can work, grow, and contribute for years and years — as well as high-impact client projects worldwide.</p>
                   </div>
                 </div>
 
-                {/* Contact Form */}
-                <div className="contact-form-card reveal-right">
-                  <h3><i className="fa-solid fa-paper-plane" style={{ color: 'var(--shopify-green)', marginRight: '10px' }}></i>Send Me a Message</h3>
+                {/* Right Form */}
+                <div className="contact-form-wrap reveal-right">
+                  <h3>Send a Direct Message</h3>
+                  <p className="form-sub">I usually respond within 24 hours.</p>
 
                   {submitSuccess ? (
                     <div className="form-success-alert">
                       <i className="fa-regular fa-circle-check"></i>
-                      <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.3rem' }}>Message Sent!</h3>
-                      <p>Thank you for reaching out! I'll get back to you within 24 hours.</p>
-                      <button onClick={() => setSubmitSuccess(false)} className="btn-secondary" style={{ marginTop: '14px', padding: '9px 20px', fontSize: '0.9rem' }}>
-                        Send Another Message
+                      <h3>Message Received!</h3>
+                      <p>Thank you for reaching out. I'll review your project details and get back to you shortly.</p>
+                      <button onClick={() => setSubmitSuccess(false)} className="btn-primary" style={{ marginTop: '1.5rem' }}>
+                        Send Another Inquiry
                       </button>
                     </div>
                   ) : (
                     <form id="contact-form" onSubmit={handleFormSubmit}>
                       {formError && (
-                        <div style={{ color: '#dc2626', background: '#fef2f2', border: '1px solid #fca5a5', padding: '12px 16px', borderRadius: '8px', marginBottom: '18px', fontSize: '0.88rem', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                        <div className="form-err">
                           <i className="fa-solid fa-circle-exclamation"></i> {formError}
                         </div>
                       )}
 
-                      <div className="form-group-row">
+                      <div className="form-row">
                         <div className="form-group">
-                          <label className="form-label" htmlFor="contact-name">Full Name</label>
+                          <label className="form-label" htmlFor="contact-name">Your Name</label>
                           <input
                             id="contact-name"
                             type="text"
                             className="form-control"
-                            placeholder="e.g. John Smith"
+                            placeholder="e.g. Sarah Jenkins"
                             value={formState.name}
                             onChange={e => setFormState({ ...formState, name: e.target.value })}
                           />
@@ -1130,7 +1176,7 @@
                             id="contact-email"
                             type="email"
                             className="form-control"
-                            placeholder="e.g. john@store.com"
+                            placeholder="e.g. sarah@brand.com"
                             value={formState.email}
                             onChange={e => setFormState({ ...formState, email: e.target.value })}
                           />
@@ -1138,31 +1184,31 @@
                       </div>
 
                       <div className="form-group">
-                        <label className="form-label" htmlFor="contact-subject">Subject</label>
+                        <label className="form-label" htmlFor="contact-subject">Project Type / Store Domain</label>
                         <input
                           id="contact-subject"
                           type="text"
                           className="form-control"
-                          placeholder="e.g. Custom Shopify Theme Development"
+                          placeholder="e.g. Custom Theme Build / Speed Optimization"
                           value={formState.subject}
                           onChange={e => setFormState({ ...formState, subject: e.target.value })}
                         />
                       </div>
 
                       <div className="form-group">
-                        <label className="form-label" htmlFor="contact-message">Project Details / Message</label>
+                        <label className="form-label" htmlFor="contact-message">Project Details</label>
                         <textarea
                           id="contact-message"
                           className="form-control"
-                          placeholder="Tell me about your Shopify project, what you need, and your timeline..."
+                          placeholder="Tell me about your store requirements, timeline, and goals..."
                           value={formState.message}
                           onChange={e => setFormState({ ...formState, message: e.target.value })}
                         ></textarea>
                       </div>
 
-                      <button id="contact-submit-btn" type="submit" disabled={isSubmitting} className="form-btn">
+                      <button id="contact-submit-btn" type="submit" disabled={isSubmitting} className="form-submit">
                         {isSubmitting ? (
-                          <><i className="fa-solid fa-spinner fa-spin"></i> Sending...</>
+                          <><i className="fa-solid fa-spinner fa-spin"></i> Sending Inquiry...</>
                         ) : (
                           <>Send Message <i className="fa-solid fa-paper-plane"></i></>
                         )}
@@ -1170,6 +1216,7 @@
                     </form>
                   )}
                 </div>
+
               </div>
             </div>
           </section>
@@ -1180,20 +1227,20 @@
               <div className="footer-inner">
                 <div className="footer-brand">
                   <div className="footer-logo">
-                    <i className="fa-brands fa-shopify"></i>
-                    Vijay Karan Sharma
+                    <div className="logo-icon"><i className="fa-brands fa-shopify"></i></div>
+                    VIJAY KARAN SHARMA
                   </div>
-                  <p>Expert Shopify Developer &amp; Performance Marketing Specialist — building high-converting stores with Liquid, custom themes, Meta Ads, Google Ads, and data-driven growth strategies. Available for remote projects worldwide.</p>
+                  <p>
+                    Shopify Developer & E-Commerce Architect specializing in bespoke Liquid themes, high-performance storefronts, and conversion-focused integrations.
+                  </p>
                 </div>
 
                 <div className="footer-col">
-                  <h4>Navigation</h4>
+                  <h4>Quick Links</h4>
                   <ul>
                     {navLinks.map(link => (
                       <li key={link.id}>
-                        <a href={`#${link.id}`} onClick={e => { e.preventDefault(); handleNavClick(link.id); }}>
-                          {link.label}
-                        </a>
+                        <a href={`#${link.id}`} onClick={e => { e.preventDefault(); handleNavClick(link.id); }}>{link.label}</a>
                       </li>
                     ))}
                   </ul>
@@ -1202,31 +1249,19 @@
                 <div className="footer-col">
                   <h4>Services</h4>
                   <ul>
-                    <li><a href="#contact" onClick={e => { e.preventDefault(); handleNavClick('contact'); }}>Custom Theme Dev</a></li>
-                    <li><a href="#contact" onClick={e => { e.preventDefault(); handleNavClick('contact'); }}>Figma to Shopify</a></li>
-                    <li><a href="#contact" onClick={e => { e.preventDefault(); handleNavClick('contact'); }}>Meta &amp; Google Ads</a></li>
-                    <li><a href="#contact" onClick={e => { e.preventDefault(); handleNavClick('contact'); }}>Performance Marketing</a></li>
-                    <li><a href="#contact" onClick={e => { e.preventDefault(); handleNavClick('contact'); }}>CRO &amp; ROAS Optimization</a></li>
-                    <li><a href="#contact" onClick={e => { e.preventDefault(); handleNavClick('contact'); }}>Shopify Plus</a></li>
-                    <li><a href="#contact" onClick={e => { e.preventDefault(); handleNavClick('contact'); }}>Headless Shopify</a></li>
+                    {['Shopify Liquid Themes', 'Figma to Shopify', 'App Replacements', 'Speed Optimization', 'React Web Apps'].map(s => (
+                      <li key={s}><a href="#contact" onClick={e => { e.preventDefault(); handleNavClick('contact'); }}>{s}</a></li>
+                    ))}
                   </ul>
                 </div>
               </div>
 
               <div className="footer-bottom">
-                <p className="footer-copy">
-                  © {new Date().getFullYear()} Vijay Karan Sharma. All Rights Reserved. Built with React & CSS.
-                </p>
-                <div className="footer-socials">
-                  <a href={`mailto:${RESUME_DATA.profile.email}`} className="footer-social-btn" title="Email">
-                    <i className="fa-solid fa-envelope"></i>
-                  </a>
-                  <a href={`tel:${RESUME_DATA.profile.phone}`} className="footer-social-btn" title="WhatsApp">
-                    <i className="fa-brands fa-whatsapp"></i>
-                  </a>
-                  <a href="#home" onClick={e => { e.preventDefault(); handleNavClick('home'); }} className="footer-social-btn" title="Back to Top">
-                    <i className="fa-solid fa-chevron-up"></i>
-                  </a>
+                <div className="footer-socials" style={{ marginLeft: 'auto' }}>
+                  <a href={`mailto:${DATA.profile.email}`} className="footer-social-btn" title="Email"><i className="fa-solid fa-envelope"></i></a>
+                  <a href={`https://wa.me/919459009099`} target="_blank" rel="noopener noreferrer" className="footer-social-btn" title="WhatsApp"><i className="fa-brands fa-whatsapp"></i></a>
+                  <a href={DATA.profile.linkedin} target="_blank" rel="noopener noreferrer" className="footer-social-btn" title="LinkedIn"><i className="fa-brands fa-linkedin"></i></a>
+                  <a href="#home" onClick={e => { e.preventDefault(); handleNavClick('home'); }} className="footer-social-btn" title="Back to Top"><i className="fa-solid fa-chevron-up"></i></a>
                 </div>
               </div>
             </div>
@@ -1235,32 +1270,26 @@
       );
     }
 
-    // Mount React App
     const root = ReactDOM.createRoot(document.getElementById('root'));
     root.render(<App />);
   </script>
 
   <!-- ================================================
-       APPLE-QUALITY ANIMATION ENGINE
-       Cursor spotlight, scroll progress, magnetic tilt,
-       ripple, AirDrop shimmer, ambient particles
+       SUBTLE MONOCHROME UTILITY ANIMATIONS
+       Scroll Progress & Subtle Pointer Interaction
        ================================================ -->
   <script>
     (function() {
-      /* ── Wait for DOM ── */
       function ready(fn) {
         if (document.readyState !== 'loading') fn();
         else document.addEventListener('DOMContentLoaded', fn);
       }
 
       ready(function() {
-        /* =============================================
-           1. SCROLL PROGRESS BAR (Dynamic Island style)
-           ============================================= */
+        /* 1. SCROLL PROGRESS BAR (BLACK) */
         const progressBar = document.createElement('div');
         progressBar.className = 'scroll-progress';
         document.body.prepend(progressBar);
-
         window.addEventListener('scroll', function() {
           const scrollTop = window.scrollY;
           const docHeight = document.documentElement.scrollHeight - window.innerHeight;
@@ -1268,22 +1297,15 @@
           progressBar.style.transform = `scaleX(${progress})`;
         }, { passive: true });
 
-        /* =============================================
-           2. CURSOR SPOTLIGHT
-           ============================================= */
+        /* 2. SUBTLE MONOCHROME SPOTLIGHT */
         const spotlight = document.createElement('div');
         spotlight.className = 'cursor-spotlight';
         document.body.appendChild(spotlight);
-
-        let mouseX = -999, mouseY = -999;
-        let spotX = -999, spotY = -999;
-
+        let mouseX = -999, mouseY = -999, spotX = -999, spotY = -999;
         window.addEventListener('mousemove', function(e) {
           mouseX = e.clientX;
           mouseY = e.clientY;
         }, { passive: true });
-
-        // Smooth follow with lerp
         function lerpSpotlight() {
           spotX += (mouseX - spotX) * 0.08;
           spotY += (mouseY - spotY) * 0.08;
@@ -1292,239 +1314,10 @@
           requestAnimationFrame(lerpSpotlight);
         }
         lerpSpotlight();
-
-        document.body.addEventListener('mouseleave', function() {
-          spotlight.style.opacity = '0';
-        });
-        document.body.addEventListener('mouseenter', function() {
-          spotlight.style.opacity = '1';
-        });
-
-        /* =============================================
-           3. MAGNETIC TILT (Apple ProMotion-style)
-              Applied to cards with shimmer-card class
-           ============================================= */
-        function applyMagneticTilt(selector) {
-          document.addEventListener('mousemove', function(e) {
-            const cards = document.querySelectorAll(selector);
-            cards.forEach(function(card) {
-              const rect = card.getBoundingClientRect();
-              if (
-                e.clientX < rect.left - 60 || e.clientX > rect.right + 60 ||
-                e.clientY < rect.top - 60 || e.clientY > rect.bottom + 60
-              ) {
-                card.style.transform = '';
-                return;
-              }
-              const cx = rect.left + rect.width / 2;
-              const cy = rect.top + rect.height / 2;
-              const dx = (e.clientX - cx) / (rect.width / 2);
-              const dy = (e.clientY - cy) / (rect.height / 2);
-              const tiltX = dy * -6;
-              const tiltY = dx * 6;
-              card.style.transform = `perspective(800px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) translateY(-8px) scale(1.02)`;
-              card.style.transition = 'transform 0.1s ease, box-shadow 0.3s ease';
-            });
-          }, { passive: true });
-
-          document.addEventListener('mouseleave', function() {
-            document.querySelectorAll(selector).forEach(function(card) {
-              card.style.transform = '';
-              card.style.transition = 'transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)';
-            });
-          });
-        }
-
-        // Apply to skill cards and project cards
-        setTimeout(function() {
-          applyMagneticTilt('.skill-card');
-        }, 800);
-
-        /* =============================================
-           4. RIPPLE EFFECT on buttons
-           ============================================= */
-        document.addEventListener('click', function(e) {
-          const btn = e.target.closest('.btn-primary, .btn-secondary, .btn-hire, .tab-btn, .social-circle');
-          if (!btn) return;
-          const rect = btn.getBoundingClientRect();
-          const size = Math.max(rect.width, rect.height) * 1.5;
-          const ripple = document.createElement('span');
-          ripple.className = 'ripple-effect';
-          ripple.style.cssText = `
-            width: ${size}px;
-            height: ${size}px;
-            left: ${e.clientX - rect.left - size / 2}px;
-            top: ${e.clientY - rect.top - size / 2}px;
-            position: absolute;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.3);
-            pointer-events: none;
-            animation: ripple 0.6s ease-out forwards;
-          `;
-          btn.style.position = 'relative';
-          btn.style.overflow = 'hidden';
-          btn.appendChild(ripple);
-          ripple.addEventListener('animationend', function() { ripple.remove(); });
-        });
-
-        /* =============================================
-           5. AMBIENT HERO PARTICLE CANVAS
-           ============================================= */
-        function createParticleCanvas(section) {
-          const canvas = document.createElement('canvas');
-          canvas.style.cssText = `
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 0;
-            opacity: 0.6;
-          `;
-          section.style.position = section.style.position || 'relative';
-          section.insertBefore(canvas, section.firstChild);
-
-          const ctx = canvas.getContext('2d');
-          const particles = [];
-          const colors = [
-            'rgba(91,33,182,0.35)',
-            'rgba(0,128,96,0.3)',
-            'rgba(124,58,237,0.25)',
-            'rgba(6,182,212,0.2)'
-          ];
-
-          function resize() {
-            canvas.width = section.offsetWidth;
-            canvas.height = section.offsetHeight;
-          }
-          resize();
-          window.addEventListener('resize', resize, { passive: true });
-
-          for (let i = 0; i < 18; i++) {
-            particles.push({
-              x: Math.random() * canvas.width,
-              y: Math.random() * canvas.height,
-              r: Math.random() * 3 + 1,
-              dx: (Math.random() - 0.5) * 0.4,
-              dy: -(Math.random() * 0.5 + 0.2),
-              color: colors[Math.floor(Math.random() * colors.length)],
-              life: Math.random(),
-              maxLife: Math.random() * 0.5 + 0.5
-            });
-          }
-
-          function animateParticles() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            particles.forEach(function(p) {
-              p.life += 0.003;
-              if (p.life > p.maxLife) {
-                p.x = Math.random() * canvas.width;
-                p.y = canvas.height + 10;
-                p.life = 0;
-                p.maxLife = Math.random() * 0.5 + 0.5;
-                p.dy = -(Math.random() * 0.5 + 0.2);
-              }
-              p.x += p.dx;
-              p.y += p.dy;
-              const alpha = Math.sin((p.life / p.maxLife) * Math.PI);
-              ctx.globalAlpha = alpha * 0.7;
-              ctx.beginPath();
-              ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-              ctx.fillStyle = p.color;
-              ctx.fill();
-            });
-            ctx.globalAlpha = 1;
-            requestAnimationFrame(animateParticles);
-          }
-          animateParticles();
-        }
-
-        setTimeout(function() {
-          const heroSection = document.getElementById('home');
-          if (heroSection) createParticleCanvas(heroSection);
-        }, 300);
-
-        /* =============================================
-           6. SCROLL-TRIGGERED SECTION GLOW
-           Adds a subtle purple glow pulse when a section
-           enters the viewport — like Apple TV screen wake
-           ============================================= */
-        const sectionObserver = new IntersectionObserver(function(entries) {
-          entries.forEach(function(entry) {
-            if (entry.isIntersecting) {
-              const el = entry.target;
-              el.style.transition = 'box-shadow 1.5s ease';
-              el.style.boxShadow = 'inset 0 0 120px rgba(91, 33, 182, 0.04)';
-              setTimeout(function() {
-                el.style.boxShadow = '';
-              }, 1500);
-              sectionObserver.unobserve(el);
-            }
-          });
-        }, { threshold: 0.15 });
-
-        setTimeout(function() {
-          document.querySelectorAll('section').forEach(function(s) {
-            sectionObserver.observe(s);
-          });
-        }, 500);
-
-        /* =============================================
-           7. SHIMMER SWEEP on card hover (JS-driven)
-           Creates a white light sweep across cards
-           ============================================= */
-        function addShimmerCards() {
-          const cards = document.querySelectorAll('.skill-card, .project-card, .timeline-card, .workflow-card, .stat-card, .misc-card');
-          cards.forEach(function(card) {
-            if (card.classList.contains('shimmer-card')) return;
-            card.classList.add('shimmer-card');
-          });
-        }
-        setTimeout(addShimmerCards, 600);
-        // Re-apply after filter changes
-        const shimmerObserver = new MutationObserver(function() {
-          setTimeout(addShimmerCards, 100);
-        });
-        shimmerObserver.observe(document.body, { childList: true, subtree: true });
-
-        /* =============================================
-           8. SPRING HOVER — avatar frame tilt
-           ============================================= */
-        setTimeout(function() {
-          const avatarFrame = document.querySelector('.avatar-frame');
-          if (!avatarFrame) return;
-          const container = avatarFrame.closest('.avatar-container');
-          if (!container) return;
-
-          container.addEventListener('mousemove', function(e) {
-            const rect = container.getBoundingClientRect();
-            const cx = rect.left + rect.width / 2;
-            const cy = rect.top + rect.height / 2;
-            const dx = (e.clientX - cx) / (rect.width / 2);
-            const dy = (e.clientY - cy) / (rect.height / 2);
-            avatarFrame.style.transform = `perspective(600px) rotateX(${dy * -8}deg) rotateY(${dx * 8}deg) scale(1.04)`;
-            avatarFrame.style.transition = 'transform 0.1s ease';
-          });
-          container.addEventListener('mouseleave', function() {
-            avatarFrame.style.transform = '';
-            avatarFrame.style.transition = 'transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)';
-          });
-        }, 600);
-
-        /* =============================================
-           9. ANIMATED GRADIENT BORDER on section headers
-              Creates Apple-style living border
-           ============================================= */
-        const dividers = document.querySelectorAll('.section-divider');
-        dividers.forEach(function(div) {
-          div.style.background = 'linear-gradient(90deg, #008060, #0071e3, #06b6d4, #0071e3, #008060)';
-          div.style.backgroundSize = '300% 100%';
-          div.style.animation = 'gradient-shift 4s ease infinite';
-        });
-
-      }); // end ready()
+        document.body.addEventListener('mouseleave', function() { spotlight.style.opacity = '0'; });
+        document.body.addEventListener('mouseenter', function() { spotlight.style.opacity = '1'; });
+      });
     })();
   </script>
-
 </body>
 </html>
