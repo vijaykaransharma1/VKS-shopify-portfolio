@@ -245,13 +245,15 @@
         // ==================== 7. AMDC Website ====================
         {
           title: "AMDC Digital Platform",
-          domain: "amdc-website.vercel.app",
-          desc: "Corporate digital web platform engineered with modern React frontend architecture and deployed on Vercel with custom domain configuration. Ongoing active development featuring high-performance interactive components, responsive layout, and clean UI execution.",
-          tag: "Ongoing Project",
+          domain: "amdcarchitects.com",
+          desc: "Corporate digital web platform engineered with modern React frontend architecture and deployed with custom domain configuration for a luxury architecture & interior design studio. Features high-performance interactive portfolio showcases, responsive layout, and clean UI execution.",
+          tag: "Architecture & Interior Design",
           category: "client",
           isLive: true,
-          url: "https://amdc-website.vercel.app/",
-          result: "Ongoing Project · Live on Vercel",
+          liveLabel: "Live Website",
+          btnLabel: "Visit Website",
+          url: "https://www.amdcarchitects.com/",
+          result: "Live Production Site · amdcarchitects.com",
           tech: ["React", "TypeScript", "Vercel", "Tailwind / CSS", "Custom Domain"],
           icon: "fa-solid fa-globe"
         },
@@ -754,7 +756,7 @@
                         {project.isLive && (
                           <span className="proj-live-badge">
                             <span className="proj-live-dot"></span>
-                            Live Store
+                            {project.liveLabel || 'Live Store'}
                           </span>
                         )}
                         <span className="proj-tag-pill">{project.tag}</span>
@@ -780,7 +782,7 @@
                           className="proj-visit-btn"
                           title={`Visit ${project.title}`}
                         >
-                          Visit Live Store <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                          {project.btnLabel || 'Visit Live Store'} <i className="fa-solid fa-arrow-up-right-from-square"></i>
                         </a>
                       ) : null}
 
