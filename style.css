@@ -575,8 +575,8 @@ header.header.scrolled {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top center;
-  filter: grayscale(100%) contrast(115%) brightness(98%);
+  object-position: center top;
+  filter: grayscale(100%) contrast(105%) brightness(99%);
   transition: filter 0.4s ease, transform 0.4s ease;
 }
 .hero-photo-card:hover .hero-photo-frame img {
