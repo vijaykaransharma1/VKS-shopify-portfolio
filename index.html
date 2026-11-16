@@ -48,7 +48,7 @@
         phone: "+919459009099",
         location: "Himachal Pradesh, India",
         linkedin: "https://linkedin.com/in/vijaykaransharma",
-        resumeUrl: "./resume/vijay-karan-sharma-shopify-developer-09June2026.pdf",
+        resumeUrl: "./resume/VIJAY-KARAN-SHARMA-CV updated.pdf",
         bio: "I'm Vijay Karan Sharma, a dedicated Shopify Developer with 3+ years of intensive experience having worked across 50+ Shopify stores. Whether you need any complex functionality, bespoke Liquid theme architecture, app replacements to eliminate monthly bills, or zero-downtime troubleshooting — I build and ship it cleanly with pixel-perfect precision.",
         stats: [
           { number: "50+", label: "Stores Worked On" },
@@ -490,6 +490,8 @@
       const [formError, setFormError] = useState('');
       const [isSubmitting, setIsSubmitting] = useState(false);
       const [submitSuccess, setSubmitSuccess] = useState(false);
+      const [showResumeModal, setShowResumeModal] = useState(false);
+      const [showResumePreview, setShowResumePreview] = useState(false);
 
       const typewriterText = useTypewriter([
         "Shopify Stores",
@@ -589,9 +591,9 @@
               </nav>
 
               <div className="nav-actions">
-                <a href={DATA.profile.resumeUrl} download="Vijay_Karan_Sharma_Shopify_Developer.pdf" className="btn-secondary nav-menu" style={{ padding: '0.5rem 1.15rem', fontSize: '0.82rem' }}>
-                  <i className="fa-solid fa-file-arrow-down"></i> Resume
-                </a>
+                <button type="button" onClick={() => setShowResumeModal(true)} className="btn-secondary nav-menu" style={{ padding: '0.5rem 1.15rem', fontSize: '0.82rem', cursor: 'pointer' }}>
+                  <i className="fa-solid fa-file-lines"></i> Resume
+                </button>
                 <a href="#contact" onClick={e => { e.preventDefault(); handleNavClick('contact'); }} className="btn-hire nav-menu">
                   <i className="fa-solid fa-paper-plane"></i> Get In Touch
                 </a>
@@ -610,9 +612,9 @@
                   {link.label}
                 </a>
               ))}
-              <a href={DATA.profile.resumeUrl} download="Vijay_Karan_Sharma_Shopify_Developer.pdf" className="btn-secondary" style={{ marginTop: '0.5rem', width: '220px' }}>
-                <i className="fa-solid fa-file-arrow-down"></i> Download Resume
-              </a>
+              <button type="button" onClick={() => { setIsMobileMenuOpen(false); setShowResumeModal(true); }} className="btn-secondary" style={{ marginTop: '0.5rem', width: '220px', cursor: 'pointer' }}>
+                <i className="fa-solid fa-file-lines"></i> View Resume
+              </button>
               <a href="#contact" onClick={e => { e.preventDefault(); handleNavClick('contact'); }} className="btn-primary" style={{ marginTop: '0.5rem', width: '220px' }}>
                 <i className="fa-solid fa-paper-plane"></i> Get In Touch
               </a>
@@ -651,9 +653,9 @@
                   <button onClick={() => handleNavClick('projects')} className="btn-primary">
                     <i className="fa-solid fa-arrow-down"></i> Explore Work
                   </button>
-                  <a href={DATA.profile.resumeUrl} download="Vijay_Karan_Sharma_Shopify_Developer.pdf" className="btn-secondary">
-                    <i className="fa-solid fa-file-arrow-down"></i> Download Resume (PDF)
-                  </a>
+                  <button type="button" onClick={() => setShowResumeModal(true)} className="btn-secondary" style={{ cursor: 'pointer' }}>
+                    <i className="fa-solid fa-file-lines"></i> Resume (Preview / Download)
+                  </button>
                   <button onClick={() => handleNavClick('contact')} className="btn-secondary">
                     <i className="fa-solid fa-envelope"></i> Let's Talk
                   </button>
@@ -1252,6 +1254,118 @@
               </div>
             </div>
           </footer>
+
+          {/* ==================== RESUME OPTIONS POPUP ==================== */}
+          {showResumeModal && (
+            <div className="resume-modal-backdrop" onClick={() => setShowResumeModal(false)}>
+              <div className="resume-choice-modal" onClick={e => e.stopPropagation()}>
+                <button
+                  type="button"
+                  className="resume-modal-close"
+                  onClick={() => setShowResumeModal(false)}
+                  aria-label="Close"
+                >
+                  <i className="fa-solid fa-xmark"></i>
+                </button>
+
+                <div className="resume-choice-icon">
+                  <i className="fa-regular fa-file-pdf"></i>
+                </div>
+
+                <h3>Vijay Karan Sharma</h3>
+                <p>Shopify Developer Resume &bull; Updated</p>
+
+                <div className="resume-choice-actions">
+                  <button
+                    type="button"
+                    className="resume-action-card"
+                    onClick={() => {
+                      setShowResumeModal(false);
+                      setShowResumePreview(true);
+                    }}
+                  >
+                    <div className="action-icon">
+                      <i className="fa-solid fa-eye"></i>
+                    </div>
+                    <div className="resume-action-info">
+                      <div className="resume-action-title">
+                        Preview Resume <i className="fa-solid fa-arrow-up-right-from-square" style={{ fontSize: '0.75rem', opacity: 0.7 }}></i>
+                      </div>
+                      <div className="resume-action-desc">Read and inspect CV in browser modal</div>
+                    </div>
+                    <i className="fa-solid fa-chevron-right resume-action-arrow"></i>
+                  </button>
+
+                  <a
+                    href={DATA.profile.resumeUrl}
+                    download="Vijay_Karan_Sharma_Shopify_Developer.pdf"
+                    className="resume-action-card"
+                    onClick={() => setShowResumeModal(false)}
+                  >
+                    <div className="action-icon">
+                      <i className="fa-solid fa-download"></i>
+                    </div>
+                    <div className="resume-action-info">
+                      <div className="resume-action-title">
+                        Download PDF
+                      </div>
+                      <div className="resume-action-desc">Save offline copy directly to your device</div>
+                    </div>
+                    <i className="fa-solid fa-chevron-right resume-action-arrow"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* ==================== RESUME IN-APP PREVIEW MODAL ==================== */}
+          {showResumePreview && (
+            <div className="resume-modal-backdrop" onClick={() => setShowResumePreview(false)}>
+              <div className="resume-preview-modal" onClick={e => e.stopPropagation()}>
+                <div className="resume-preview-header">
+                  <div className="resume-preview-title">
+                    <i className="fa-regular fa-file-pdf"></i>
+                    <span>Vijay_Karan_Sharma_CV.pdf</span>
+                  </div>
+                  <div className="resume-preview-tools">
+                    <a
+                      href={DATA.profile.resumeUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-secondary"
+                      style={{ padding: '0.42rem 0.85rem', fontSize: '0.8rem' }}
+                      title="Open in new tab"
+                    >
+                      <i className="fa-solid fa-arrow-up-right-from-square"></i> New Tab
+                    </a>
+                    <a
+                      href={DATA.profile.resumeUrl}
+                      download="Vijay_Karan_Sharma_Shopify_Developer.pdf"
+                      className="btn-primary"
+                      style={{ padding: '0.42rem 0.85rem', fontSize: '0.8rem' }}
+                    >
+                      <i className="fa-solid fa-download"></i> Download
+                    </a>
+                    <button
+                      type="button"
+                      className="resume-modal-close"
+                      style={{ position: 'static' }}
+                      onClick={() => setShowResumePreview(false)}
+                      aria-label="Close Preview"
+                    >
+                      <i className="fa-solid fa-xmark"></i>
+                    </button>
+                  </div>
+                </div>
+                <div className="resume-preview-body">
+                  <iframe
+                    src={`${DATA.profile.resumeUrl}#toolbar=1&navpanes=0`}
+                    title="Resume Preview"
+                  />
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       );
     }
